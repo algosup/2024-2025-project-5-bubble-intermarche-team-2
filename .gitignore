@@ -1,0 +1,20 @@
+# macOS and IDE-specific files  
+.DS_STORE  
+.idea  
+*.iml  
+.vscode  
+*.sublime-project  
+*.sublime-workspace  
+
+# Ignore temporary and log files  
+*~  
+*.log*  
+*.swp  
+*.swo  
+
+# Ignore generated files from testing and build tools  
+__benchmarks__  
+coverage/  
+build/  
+remote-repo/  
+.module-cache  
