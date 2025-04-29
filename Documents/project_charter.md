@@ -1,7 +1,9 @@
+# Project Charter
+
 ## Project Definition
 ---
 
-Intermarché Saint-Rémy-de-Provence, our client, want an application to promote their wines and cheeses, due to the high touristic area they also want a multi-language app. To achieve this we will make an application using [bubble](https://bubble.io/home/apps) (no code software).
+Intermarché Saint-Rémy-de-Provence, our client, wants an application to promote their wines and cheeses. As the area attracts many tourists, they also want a multi-language app. To achieve this we will make an application using [bubble](https://bubble.io/home/apps) (no code software).
 
 This project is initiated by an external company; the client is Intermarché Saint-Rémy-de-Provence. Communication with the client will be managed by our Program Manager, Matéo Lefin.
 
@@ -17,7 +19,7 @@ This project is initiated by an external company; the client is Intermarché Sai
 | Role | Representative | Expectations |
 | ---- | -------------- | ------------ |
 | School Director             | Franck JEANNIN (ALGOSUP) | Clear and structured documentation and project management, reflecting skills learned in class.          |
-| Intermarché worker & Client | Célia and Chris          | Intuitive and user friendly application to promote their cheeses and wines to increase their turnhover. |
+| Intermarché worker & Client | Célia and Chris | Intuitive and user-friendly application to promote their cheeses and wines to increase their turnover. |
 
 ## Team Members and Responsibilities
 ---
@@ -34,7 +36,7 @@ This project is initiated by an external company; the client is Intermarché Sai
 ## Project Plan
 ---
 
-On April 25th, 2025, after the first meeting with the clients to initialize the project we made a brainstorming session to develop ideas, understand what is mandatory, nice to have and need to be avoid for the application.
+On April 25th, 2025, after the first meeting with the clients to initialize the project, we held a brainstorming session to develop ideas, understand what is mandatory, nice to have, and needs to be avoided for the application.
 
 Communication with the client will primarily be through email. However, meetings may be scheduled as needed for clarity on specific issues.
 
@@ -74,9 +76,9 @@ A final 15-minute presentation summarizing the project and its outcomes will als
 
 Budget: €0 (No external funding)
 Team: 6 members (5 during the first week)
-Work Hours: 
+Work Hours: 39 half-days of 3 hours and 30 minutes each
 
-Total estimated human hours: 
+Total estimated human hours: 819 hours
 
 ## Risks
 ---
