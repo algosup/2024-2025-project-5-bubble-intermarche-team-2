@@ -10,8 +10,21 @@ This project is initiated by an external company; the client is Intermarché Sai
 ## Scope
 ---
 
+|In Scope|
+|--------|
+| Mobile App                                           |
+| Multiple Languages (At least English and French)     |
+| Intuitive/User friendly                              |
+| Barcode Scan system (Scanning Intermarché's products)|
+| Geolocation                                          |
+| The App works Offline                                |
+
 ## Out of Scope 
 ---
+
+|Out of Scope|
+|------------|
+| sign in/log in system |
 
 ## Stakeholders
 ---
