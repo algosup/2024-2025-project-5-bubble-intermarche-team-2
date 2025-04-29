@@ -33,28 +33,86 @@
 
 
 ## Glossary
+|Term | Definition|
+|-----|-----------|
+| Pairing technique | Also called **Cross-selling** for non-food related product. It refers to suggesting products that complement what a customer is already interested in.|
 
 ## I. Introduction
 
 ### 1. Project Overview
 
+This project is a mobile Application that recommends wine, cheese or both that goes with a recipe.
+
+This project has been requested by the Intermarché from Saint Rémy de Provance. 
+
+
+Our contacts are Célia Moustier and Chris Cadeau. 
+
+Chris Cadeau starts his shift early in the morning, leaving only a small lapse of time for customer to ask for recommendation before he finishes his shift in the morning.
+
 ### 2. Project Definitions
 
 #### Project Vision
 
+The Intermarché aims for an increase of their sells on wine and cheese by using the [**pairing technique**](#glossary) to recommend them with food recipes. The App should also be able to recommend recipes depending of which wine or cheese the client is interested in.
+
+
 #### Objectives
+
+➭ **It must be a mobile app**, ensuring offline access, geolocation and preferences registration.
+
+➭ **The app should open swiftly** so they can access to functionalities directly instead of taking times to log in/sign up Instead of buying what they want.
+
+➭ **The app must be user friendly** to make sure the user isn't lost in the app.
+
+➭ **Multiple languages must be implemented** for a wider public due to the touristic flux of the region.
 
 #### Project Scope
 
+|In Scope|
+|--------|
+| Mobile App |
+| Multiple Languages (At least English and French)|
+| Intuitive/User friendly|
+
+|Nice to Have|
+|--------|
+| Barcode Scan system (Scanning Intermarché's products)|
+| Geolocation |
+| The App works Offline |
+| Products rating system |
+| Light/Dark mode|
+
+|Out of Scope|
+|--------|
+| sign in/log in system |
+
 #### Audience
 
+**External customers:** People coming from foreign countries for vacations and would love to buy local wine and cheese to consume french or for their cuisine.
+
+**Local customers:** Habitants of Saint Rémy de Provance and surroundings cities/villages. They already consume frequently Intermarché products and could possibly buy other to enhance their cuisine.
+
+
 #### Main deliverables
+
+The mobile app and at least all core functionalities will be delivered to Intermarché. Mock ups will also be delivered to ensure we stay on track with Intermarché's request.
 
 ## II. Project UX and UI
 
 ### 1. UX Features
 
 ### 2. Color Palette
+
+Due to the location of the Intermarché, we decided represent France and Mediterranean sea with our color palette.
+
+![Color Palette Image]()
+
+*Color palette with their color code*
+
+We have three colors, a variant of blue, white and red. It will represents France.
+
+The colors are slightly different compared to regular French flag, this variant also represents partially Mediterranean climate.
 
 ### 3. Font
 
