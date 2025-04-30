@@ -14,7 +14,7 @@ This project is initiated by an external company; the client is Intermarché Sai
 |--------|
 | Mobile App                                           |
 | Multiple Languages (At least English and French)     |
-| Intuitive/User friendly                              |
+| Intuitive/User-friendly                              |
 | Barcode Scan system (Scanning Intermarché's products)|
 | Geolocation                                          |
 | The App works Offline                                |
@@ -24,15 +24,15 @@ This project is initiated by an external company; the client is Intermarché Sai
 
 |Out of Scope|
 |------------|
-| sign in/log in system |
+| Sign in/Log in system |
 
 ## Stakeholders
 ---
 
 | Role | Representative | Expectations |
 | ---- | -------------- | ------------ |
-| School Director             | Franck JEANNIN (ALGOSUP) | Clear and structured documentation and project management, reflecting skills learned in class.          |
-| Intermarché worker & Client | Célia and Chris | Intuitive and user-friendly application to promote their cheeses and wines to increase their turnover. |
+| School Director             | Franck JEANNIN (ALGOSUP) | Clear and structured documentation and project management, reflecting skills learned in class. |
+| Intermarché worker & Client | Célia and Chris | Intuitive and user-friendly application to promote their cheeses and wines to increase their turnover.  |
 
 ## Team Members and Responsibilities
 ---
@@ -99,6 +99,6 @@ Total estimated human hours: 819 hours
 | Risk Type | Description | Likelihood | Impact | Mitigation Strategy |
 | --------- | ----------- | ---------- | ------ | ------------------- |
 | Misinterpretation of Requirements | Key requirements may be misunderstood or omitted.                                            | Medium | High | Regular client communication and clarification meetings.   |
-| Unengaging Application Design     | The application might be intuitive and user friendly but fail to be attractive for users.    | Low    | High | Frequent testing with non-team members to gather feedback. |
+| Unengaging Application Design     | The application might be intuitive and user-friendly but fail to be attractive for users.    | Low    | High | Frequent testing with non-team members to gather feedback. |
 | Overconfidence in Scope           | The project scope may exceed the available time and resources.                               | Medium | High | Start small and expand iteratively based on progress.      |
 | Attachment to the Product         | Team members may become too attached to features that do not align with client requirements. | Low    | High | Be open to pivoting and adapting to client feedback.       |
