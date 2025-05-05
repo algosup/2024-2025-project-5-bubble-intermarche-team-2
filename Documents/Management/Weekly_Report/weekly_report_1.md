@@ -11,7 +11,7 @@ This week marked the beginning of the project. Consequently, most advancements w
 
 1. **Project Analysis**
    - We had our first meeting with clients and we brainstormed after to share our ideas for the project.
-   - We defined our mandatory, nice to have and need to be avoid elements for the application.
+   - We defined our mandatory, nice-to-have, and need-to-avoid elements for the application.
 2. **One-Sheet Design Document**
    - It has been written and sent to the client for approval.
 3. **Management Documents**
@@ -29,7 +29,7 @@ This week marked the beginning of the project. Consequently, most advancements w
 2. Missing Team Member
    - One team member was absent for the first four days.
 3. application Design
-   - Some of us hadn't prior experience designing an application. We need to learn quickly and efficiently.
+   - Some of us didn't have prior experience designing an application. We need to learn quickly and efficiently.
 4. Bubble Learning
    - The software engineers need to familiarize themselves with Bubble, a new no code tool.
 
@@ -45,9 +45,9 @@ This week marked the beginning of the project. Consequently, most advancements w
      - README;
      - Functional specification.
 2. Design
-   - With the core concept defined, the mock up should be created to provide an appealing initial visual, and seem intuitive and user friendly.
+   - With the core concept defined, the mock-up should be created to provide an appealing initial visual, and seem intuitive and user-friendly.
 3. Development
-   - Work on the database and implement it in bubble once finished.
+   - Work on the database and implement it in Bubble once finished.
 
 ## Conclusion
 ---
