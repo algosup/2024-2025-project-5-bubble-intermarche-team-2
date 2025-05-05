@@ -4,7 +4,7 @@
 ## Overview
 ---
 
-This week was primarily dedicated to refining our mock up. It also involved significant progress in document creation.
+This week was primarily dedicated to refining our mock-up. It also involved significant progress in document creation.
 
 ## Accomplishments
 ---
@@ -37,9 +37,9 @@ This week was primarily dedicated to refining our mock up. It also involved sign
 ---
 
 1. **New Role**
-   - First time for Enoal to be Technical Leader and He has some difficulty to make his technical specification, for that we advised him to search example on internet and look other technical repository on GitHub.
+   - This is Enoal's first time as a Technical Leader, and he has some difficulty making his technical specifications. For that, we advised him to search for examples on the Internet and look at other technical repositories on GitHub.
 2. **Bubble Exercise**
-   - To learn how bubble work, Grégory, the Software Engineer do the exercise of the teacher, but he encountered difficulties, to avoid to be block he used chatGPT like the teacher recommended to details steps.
+   - To learn how Bubble works, Grégory, the Software Engineer did the exercise of the teacher, but he encountered difficulties. To avoid being blocked, he used ChatGPT as the teacher recommended for detailed steps.
 
 ## Plan for Next Week
 ---
@@ -52,7 +52,7 @@ This week was primarily dedicated to refining our mock up. It also involved sign
 2. **Quality Assurance** 
    - Review new Documents.
 3. **Code**
-   - Continue the exercice and start the front end of the app.
+   - Continue the exercise and start the front end of the app.
 
 
 ## Conclusion
