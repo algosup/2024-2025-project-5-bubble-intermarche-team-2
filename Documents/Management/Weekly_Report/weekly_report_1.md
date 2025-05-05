@@ -9,17 +9,16 @@ This week marked the beginning of the project. Consequently, most advancements w
 ## Accomplishments
 ---
 
-1. Project Analysis
+1. **Project Analysis**
    - We had our first meeting with clients and we brainstormed after to share our ideas for the project.
    - We defined our mandatory, nice to have and need to be avoid elements for the application.
-2. One-Sheet Design Document
+2. **One-Sheet Design Document**
    - It has been written and sent to the client for approval.
-3. Management Documents
+3. **Management Documents**
    - The essential documents for effective project management have been created:
      - Work breakdown structure;
-     - Gantt Chart;
-     - KPIs.
-4. GitHub Initialization
+     - Gantt Chart.
+4. **GitHub Initialization**
    - We initialized the repository and established conventions for its use.
 
 ## Challenges
