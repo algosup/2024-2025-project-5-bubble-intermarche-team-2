@@ -23,6 +23,8 @@
   - [3. GitHub Folder Structure](#3-github-folder-structure)
   - [4. Conventions](#4-conventions)
   - [5. Requirements](#5-requirements)
+  - [6. Technologies](#6-technologies)
+  - [](#)
 
 </details>
 
@@ -103,3 +105,14 @@ To ensure the coordination of the document, names and so on, conventions are set
 
 Before going further, it is highly recommended to read the [Functional Specification](../Functional/functional_specification.md) document. It contains all the necessary information about the requirements and can also help in understanding the rest of this document. <br>
 
+## 6. Technologies
+
+The following technologies are used in this project:
+
+- **Bubble**: No-code platform to develop the web application.
+- **Bubble Plugin**: Additional plugins to enhance the application (e.g., API Connector, Google Maps, etc.).
+- **Bubble Database**: Database to store the data of the application.
+
+All these technologies are used directly on the Bubble platform. Therefore, there is no need to install anything on your computer and to know how to code. <br>
+
+## 
