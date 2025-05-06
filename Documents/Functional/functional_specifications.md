@@ -213,8 +213,8 @@ A slow response time or a hard-to-use application will make users unsatisfied.
 
 The App will be produced on [**Bubble**](#glossary), allowing a quick production of the app without deep coding, a responsive system, and an already made database system.
 
-![Bubble]() ![Bubble app page]()
+![Bubble](/Documents/Functional/Images/bubble.png) ![Bubble app page](/Documents/Functional/Images/bubble_app_page.png)
 
 *Screenshots of the main page of bubble and an application starting to be produced on bubble*
 
-For more information about the technical specificities of the project, please take a look at the [Technical Specification document]()
+For more information about the technical specificities of the project, please take a look at the [Technical Specification document](/Documents/Technical/technical_specification.md)
