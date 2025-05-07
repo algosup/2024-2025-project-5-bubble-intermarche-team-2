@@ -26,14 +26,19 @@
   - [6. Architecture](#6-architecture)
     - [6.1 Technologies](#61-technologies)
     - [6.2 How will it work?](#62-how-will-it-work)
-  - [7. Front-end](#7-front-end)
-    - [7.1 Bubble Platform Explanation](#71-bubble-platform-explanation)
-      - [7.1.1 Drag \& Drop Menu](#711-drag--drop-menu)
-      - [7.1.2 Workflow Menu](#712-workflow-menu)
+  - [7. Bubble Platform](#7-bubble-platform)
+    - [7.1 Front-end](#71-front-end)
+      - [7.1.1 Pages](#711-pages)
+      - [7.1.2 Drag \& Drop Menu](#712-drag--drop-menu)
+      - [7.1.3 Styles Menu](#713-styles-menu)
+    - [7.2 Back-end](#72-back-end)
+      - [7.2.1 Workflow Menu](#721-workflow-menu)
         - [A. What is it?](#a-what-is-it)
-        - [B. The Logic of the Application ](#b-the-logic-of-the-application-)
-      - [7.1.3. The Database](#713-the-database)
-      - [7.1.4. The API Connector](#714-the-api-connector)
+        - [B. The Logic of the Application](#b-the-logic-of-the-application)
+      - [7.2.2 The Database](#722-the-database)
+      - [7.2.3 The API Connector](#723-the-api-connector)
+        - [A. What is it?](#a-what-is-it-1)
+        - [B.](#b)
 
 </details>
 
@@ -133,31 +138,68 @@ As an **input** of the application, the app will ask the user to enter the name 
 To find the best pairings, we will use the **API Connector** plugin to connect to an external API <!--(we need to find it)--> that provides information about cheeses and wines. As complementary information of this API, we will consult some of the most common association on an expert site. <br>
 The **output** of the application will be the list of cheeses and wines displayed on the screen, the user interface (referred to the front-end above). 
 
-## 7. Front-end
+## 7. Bubble Platform
 
-### 7.1 Bubble Platform Explanation
+Bubble is a no-code platform that allows you to create web applications without any programming knowledge. To create an application, you place blocks, more precisely called elements, on a page and define their properties to create a rendering similar to an HTML page. <br>
 
-#### 7.1.1 Drag & Drop Menu
+### 7.1 Front-end
 
-Bubble is a no-code platform that allows you to create web applications without any programming knowledge. To add an element, you can drag and drop it from the bar on the left side, as shown on the image. <br>
+#### 7.1.1 Pages
+
+If you want to create an application with multiple sections/pages, you must create them in the **Pages** menu. The particularity of Bubble is that you need to create a page like an HTML page for each new interface even if the application has only one but with multiple menus. <br>
+
+![Pages Menu](/Documents/Technical/Images/pages_menu.jpeg)
+
+#### 7.1.2 Drag & Drop Menu
+
+To add an element (like we see at the top of the section), you can drag and drop it from the bar on the left side, as shown on the image. They act like flex containers in HTML, allowing you to group elements but also, put them in Row, Column with a Space Between each element in the container, and so on. <br>
 
 ![Drag & Drop Menu](/Documents/Technical/Images/drag_&_drop_menu.jpeg)
 
-#### 7.1.2 Workflow Menu
+#### 7.1.3 Styles Menu
+
+The styles menu is used to customize the appearance of the elements in the application. You can change the font, color, size, and other properties of the elements. Changes made here apply to all elements of the same type (like a CSS tag in a style sheet). <br>
+
+![Styles Menu](/Documents/Technical/Images/styles_menu.jpeg)
+
+### 7.2 Back-end
+
+#### 7.2.1 Workflow Menu
 
 ##### A. What is it?
 
 The workflow menu is used to create the logic of the application. It allows you to define what happens when a user interacts with an element (e.g., clicking a button, entering text in an input field, etc.). <br>
 
-##### B. The Logic of the Application <!--Add a diagram of the logics-->
+##### B. The Logic of the Application
 
-Exemples of one of the workflows that will be used in the application:
+Examples of two workflows that will be used in the application:
 
 - When the user clicks on the "Home" button in the Navbar, the app will navigate to the home page
+
+```mermaid
+graph TD
+    A(Start) --> B{Does the user click on the Home button?}
+    B -->|Yes| C[Go to the home page]
+    B -->|No| D[Do nothing]
+    C --> E(End)
+    D --> E
+```
+
 - When the user enters that he has a allergy to a specific ingredient, the app will put it in the database and will warn the user that there is the ingredient in the dish he watches.
 
+```mermaid
+graph TD
+    A(Start) --> B{Does the user enter an allergy?}
+    B -->|Yes| C[Put the allergy in the database]
+    B -->|No| F
+    C --> D{Is there an ingredient in the dish that matches the allergy?}
+    D -->|Yes| E[Warn the user]
+    D -->|No| F[Do nothing]
+    E --> G(End)
+    F --> G
+```
 
-#### 7.1.3. The Database
+#### 7.2.2 The Database
 
 The database is used to store all the data of the application. It is divided into different tables, each containing different fields. <br>
 
@@ -168,9 +210,14 @@ Here is an example of a table that will be used in the application:
   - Pictures: The pictures of the recipe
   - Category: The category of the recipe (e.g., starter, main course, dessert, etc.)
 - Association:
-- Cheeses:
   - Wine: The list of Wine Products that are stored in the database
   - Cheese: The list of Cheese Products that are stored in the database
   - Match Score: The score of the match between the cheese and the wine based on the external API and the expert site
 
-#### 7.1.4. The API Connector
+#### 7.2.3 The API Connector
+
+##### A. What is it?
+
+The API Connector is a plugin that allows you to connect to external APIs. It is used to retrieve data from these and in this case, store them in the database in order to reutilize these data for matching score between recipes and wines/cheeses. <br>
+
+##### B. 
