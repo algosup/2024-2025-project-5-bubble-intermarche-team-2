@@ -23,8 +23,17 @@
   - [3. GitHub Folder Structure](#3-github-folder-structure)
   - [4. Conventions](#4-conventions)
   - [5. Requirements](#5-requirements)
-  - [6. Technologies](#6-technologies)
-  - [](#)
+  - [6. Architecture](#6-architecture)
+    - [6.1 Technologies](#61-technologies)
+    - [6.2 How will it work?](#62-how-will-it-work)
+  - [7. Front-end](#7-front-end)
+    - [7.1 Bubble Platform Explanation](#71-bubble-platform-explanation)
+      - [7.1.1 Drag \& Drop Menu](#711-drag--drop-menu)
+      - [7.1.2 Workflow Menu](#712-workflow-menu)
+        - [A. What is it?](#a-what-is-it)
+        - [B. The Logic of the Application ](#b-the-logic-of-the-application-)
+      - [7.1.3. The Database](#713-the-database)
+      - [7.1.4. The API Connector](#714-the-api-connector)
 
 </details>
 
@@ -105,7 +114,9 @@ To ensure the coordination of the document, names and so on, conventions are set
 
 Before going further, it is highly recommended to read the [Functional Specification](../Functional/functional_specification.md) document. It contains all the necessary information about the requirements and can also help in understanding the rest of this document. <br>
 
-## 6. Technologies
+## 6. Architecture
+
+### 6.1 Technologies
 
 The following technologies are used in this project:
 
@@ -113,6 +124,53 @@ The following technologies are used in this project:
 - **Bubble Plugin**: Additional plugins to enhance the application (e.g., API Connector, Google Maps, etc.).
 - **Bubble Database**: Database to store the data of the application.
 
-All these technologies are used directly on the Bubble platform. Therefore, there is no need to install anything on your computer and to know how to code. <br>
+All these technologies are used directly on the Bubble platform. Therefore, there is no need to install anything more in your application. <br>
 
-## 
+### 6.2 How will it work?
+
+We will have to side on our application, a front-end side (the visible part of the application) and a back-end side (the database). <br>
+As an **input** of the application, the app will ask the user to enter the name of the dish they want to prepare. The app then searches the database for the ingredients of that dish, if one exists, and displays a list of cheeses and wines that pair well with it. <br>
+To find the best pairings, we will use the **API Connector** plugin to connect to an external API <!--(we need to find it)--> that provides information about cheeses and wines. As complementary information of this API, we will consult some of the most common association on an expert site. <br>
+The **output** of the application will be the list of cheeses and wines displayed on the screen, the user interface (referred to the front-end above). 
+
+## 7. Front-end
+
+### 7.1 Bubble Platform Explanation
+
+#### 7.1.1 Drag & Drop Menu
+
+Bubble is a no-code platform that allows you to create web applications without any programming knowledge. To add an element, you can drag and drop it from the bar on the left side, as shown on the image. <br>
+
+![Drag & Drop Menu](/Documents/Technical/Images/drag_&_drop_menu.jpeg)
+
+#### 7.1.2 Workflow Menu
+
+##### A. What is it?
+
+The workflow menu is used to create the logic of the application. It allows you to define what happens when a user interacts with an element (e.g., clicking a button, entering text in an input field, etc.). <br>
+
+##### B. The Logic of the Application <!--Add a diagram of the logics-->
+
+Exemples of one of the workflows that will be used in the application:
+
+- When the user clicks on the "Home" button in the Navbar, the app will navigate to the home page
+- When the user enters that he has a allergy to a specific ingredient, the app will put it in the database and will warn the user that there is the ingredient in the dish he watches.
+
+
+#### 7.1.3. The Database
+
+The database is used to store all the data of the application. It is divided into different tables, each containing different fields. <br>
+
+Here is an example of a table that will be used in the application:
+
+- Recipes:
+  - Name: The name of the recipe
+  - Pictures: The pictures of the recipe
+  - Category: The category of the recipe (e.g., starter, main course, dessert, etc.)
+- Association:
+- Cheeses:
+  - Wine: The list of Wine Products that are stored in the database
+  - Cheese: The list of Cheese Products that are stored in the database
+  - Match Score: The score of the match between the cheese and the wine based on the external API and the expert site
+
+#### 7.1.4. The API Connector
