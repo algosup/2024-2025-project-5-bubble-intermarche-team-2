@@ -38,7 +38,10 @@
       - [7.2.2 The Database](#722-the-database)
       - [7.2.3 The API Connector](#723-the-api-connector)
         - [A. What is it?](#a-what-is-it-1)
-        - [B.](#b)
+        - [B. How to connect to an external API?](#b-how-to-connect-to-an-external-api)
+  - [8. Website Functionalities](#8-website-functionalities)
+    - [8.1 Overview](#81-overview)
+      - [8.1.2 The Home Page](#812-the-home-page)
 
 </details>
 
@@ -129,7 +132,7 @@ The following technologies are used in this project:
 - **Bubble Plugin**: Additional plugins to enhance the application (e.g., API Connector, Google Maps, etc.).
 - **Bubble Database**: Database to store the data of the application.
 
-All these technologies are used directly on the Bubble platform. Therefore, there is no need to install anything more in your application. <br>
+All these technologies are used directly on the Bubble platform. Therefore, there is no need to install anything more in the application. <br>
 
 ### 6.2 How will it work?
 
@@ -140,7 +143,7 @@ The **output** of the application will be the list of cheeses and wines displaye
 
 ## 7. Bubble Platform
 
-Bubble is a no-code platform that allows you to create web applications without any programming knowledge. To create an application, you place blocks, more precisely called elements, on a page and define their properties to create a rendering similar to an HTML page. <br>
+Bubble is a no-code platform that allows to create web applications without any programming knowledge. To create an application, we place blocks, more precisely called elements, on a page and define their properties to create a rendering similar to an HTML page. <br>
 
 ### 7.1 Front-end
 
@@ -220,4 +223,23 @@ Here is an example of a table that will be used in the application:
 
 The API Connector is a plugin that allows you to connect to external APIs. It is used to retrieve data from these and in this case, store them in the database in order to reutilize these data for matching score between recipes and wines/cheeses. <br>
 
-##### B. 
+##### B. How to connect to an external API?
+
+As on the image below, you firstly need to call the API. To do that, you have to give a name to the API and the call. Then, as usual in a programming language, you must define the method (GET, POST, etc.) and the URL of the API but with the particularity that you need to remove the parameters and replace them by brackets and define a pair key-value for each parameters. Finally, as in the C++ language, you can define the visibility of the parameters (private or public).
+
+![API Connector](/Documents/Technical/Images/api_connector.png)
+
+## 8. Website Functionalities
+
+### 8.1 Overview
+
+The website will have 5 main pages (available in all the languages of the application) which are:
+
+- The Home Page
+- The QR Code Scanning Page
+- The Product Page
+- The Localization Page
+
+Each following sections will talk about one of these pages.
+
+#### 8.1.2 The Home Page
