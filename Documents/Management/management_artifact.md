@@ -162,7 +162,7 @@ This section gathers all the forms used for the KPIs.
 
 - [Team 2 Satisfaction Week 1](https://docs.google.com/spreadsheets/d/1qp5N2h278aElQnrcFFetA8gpSpnETIrQeqHXXqcD0Ro/edit?usp=sharing)
 - [Team 2 Satisfaction Week 2](https://docs.google.com/spreadsheets/d/1pTZRdDwH_3Y6K4BcoxJDUPEldAObQtLhUJ6prvdJJMQ/edit?usp=sharing)
-- [Team 2 Satisfaction Week 3]()
+- [Team 2 Satisfaction Week 3](https://docs.google.com/spreadsheets/d/1-rNQRpbYI1EugT3mb9ZXl-2FMJRv8KOvypMTRf5bkx0/edit?usp=sharing)
 - [Team 2 Satisfaction Week 4]()
 - [Team 2 Satisfaction Week 5]()
 - [Team 2 Satisfaction Week 6]()
@@ -182,6 +182,13 @@ You can access each of them directly by following the links below:
 
 - [Access Report for Week 1](/Documents/Management/Weekly_Report/weekly_report_1.md)
 - [Access Report for Week 2](/Documents/Management/Weekly_Report/weekly_report_2.md)
+- [Access Report for Week 3](/Documents/Management/Weekly_Report/weekly_report_3.md)
+- [Access Report for Week 4](/Documents/Management/Weekly_Report/weekly_report_4.md)
+- [Access Report for Week 5](/Documents/Management/Weekly_Report/weekly_report_5.md)
+- [Access Report for Week 6](/Documents/Management/Weekly_Report/weekly_report_6.md)
+- [Access Report for Week 7](/Documents/Management/Weekly_Report/weekly_report_7.md)
+- [Access Report for Week 8](/Documents/Management/Weekly_Report/weekly_report_8.md)
+- [Access Report for Week 9](/Documents/Management/Weekly_Report/weekly_report_9.md)
 
 You can also access all the reports in one file using the link below:
 
