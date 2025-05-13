@@ -34,8 +34,8 @@
 
 ## Glossary
 
-| Term              | Definition                                                                                                                                                                                                                                                                                                                                  |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Term              | Definition|
+| ----------------- | ----------|
 | Pairing technique | Also called **Cross-selling** for non-food related product. It refers to suggesting products that complement what a customer is already interested in.                                                                                                                                                                                      |
 | Figma             | Figma is a design and prototype tool commonly used for web and mobile app User Interfaces. <br> Figma also allows collaboration between team members and has an animation system.                                                                                                                                                           |
 | EAN               | **E**uropean **A**rticle **N**umber is a standardized product identification number encoded in a barcode.                                                                                                                                                                                                                                   |
@@ -103,7 +103,7 @@ The mobile app and at least all core functionalities will be delivered to Interm
 
 Due to the location of the Intermarché, we decided to represent France and the Mediterranean Sea with our color palette.
 
-![Color Palette Image]()
+![Color Palette Image](/Documents/Functional/Images/color_palette.png)
 
 _Color palette with their color code._
 
@@ -119,7 +119,7 @@ This font is simple, readable, and neutral, making it work great with the Medite
 
 Barlow has rounded terminals, giving it a slightly softer, more approachable feel than other fonts.
 
-![Font representations]()
+![Font representations](/Documents/Functional/Images/fonts.png)
 
 _different fonts including Barlow to compare._
 
@@ -131,7 +131,7 @@ All Product images that are used for this application come from the official [In
 
 Mockups are produced using [**Figma**](#glossary), allowing an animated representation of the application's functionalities.
 
-![Figma with Mockup]()
+![Figma with Mockup](/Documents/Functional/Images/figma.png)
 
 _Screenshot of the mockup on Figma._
 
@@ -141,13 +141,13 @@ _Screenshot of the mockup on Figma._
 
 When the app is launched it will give the user a language option.
 
-![Language option page]()
+![Language option page](/Documents/Functional/Images/language_page.png)
 
 _The language option page_
 
 The user will always have the option to change the app language using the language button.
 
-![Language button on pages]()
+![Language button on pages](/Documents/Functional/Images/language_button.png)
 
 _Language button position on the app pages_
 
@@ -155,13 +155,13 @@ _Language button position on the app pages_
 
 After selecting a language, the user will arrive on the main page (home menu) allowing the user to research specific products (here wine or cheese).
 
-![Product list]()
+![Product list](/Documents/Functional/Images/product_list.png)
 
 Clicking on a product will redirect the user to the specific product page, they will get access to the different recipes that can use the product in or paired with it.
 
 It also includes the product location in the Intermarché.
 
-![Product page]()
+![Product page](/Documents/Functional/Images/product_page.png)
 
 _The product page_
 
@@ -169,7 +169,7 @@ _The product page_
 
 In the same way as the products you can access the different recipes by using the same search bar, clicking on the recipe will redirect the sure to the specific recipe page.
 
-![Recipe Page]()
+![Recipe Page](/Documents/Functional/Images/recipe_page.png)
 _The recipe page_
 
 ### 4. Product Recommendations
