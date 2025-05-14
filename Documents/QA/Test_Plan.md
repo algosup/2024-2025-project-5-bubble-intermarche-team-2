@@ -17,6 +17,8 @@
   - [Test Objectives](#test-objectives)
   - [Test Strategy](#test-strategy)
   - [Test Cases](#test-cases)
+  - [Test Reporting](#test-reporting)
+  - [Bug lifecycle](#bug-lifecycle)
 
 </details>
 
@@ -104,3 +106,32 @@ The test cases will be derived from the requirements and specifications of the B
 - Comments/Notes
 
 The test cases will be organized into categories based on the features being tested (development, design, etc.). Each test case will be executed manually, and the results will be documented in a test management tool or spreadsheet. The test cases will be reviewed and approved by the project manager and the tech lead before execution.
+
+## Test Reporting
+
+Each test cycle will be followed by a test report summarizing the testing activities, including:
+
+- Test cases executed
+- Test results (pass/fail)
+- Defects found and their status
+- Recommendations for improvements or fixes
+- Overall assessment of the application's readiness for deployment
+
+The test report will be shared with the project manager, development team, and other stakeholders to ensure transparency and facilitate communication. The report will also include any lessons learned during the testing process to improve future testing efforts.
+
+## Bug lifecycle
+
+In the context of software testing, the bug lifecycle refers to the various stages that a bug goes through from its discovery to its resolution. The bug lifecycle typically includes the following stages:
+
+1. **New**: The bug is reported and logged in the bug tracking system.
+2. **Assigned**: The bug is assigned to a developer or team for investigation and resolution.
+3. **Open**: The developer begins working on the bug and investigates its root cause.
+4. **Fixed**: The developer has implemented a fix for the bug and it is ready for testing.
+5. **Retest**: The tester retests the bug to verify that it has been fixed and that the fix does not introduce new issues.
+
+This PlantUML diagram illustrates the bug lifecycle:
+
+![bugLifeCycle.svg](./Images/bugLifeCycle.svg)
+
+As you can see, the bug lifecycle is a continuous process that involves multiple stages and interactions between testers and developers. The goal of the bug lifecycle is to ensure that bugs are identified, tracked, and resolved efficiently, leading to a higher quality software product.
+The bug lifecycle is an essential part of the software development process, as it helps teams manage and prioritize bugs effectively. By following a structured bug lifecycle, teams can ensure that bugs are addressed in a timely manner and that the overall quality of the software is maintained.
