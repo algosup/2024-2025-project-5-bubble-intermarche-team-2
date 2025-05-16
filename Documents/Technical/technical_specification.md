@@ -41,7 +41,10 @@
         - [B. How to connect to an external API?](#b-how-to-connect-to-an-external-api)
   - [8. Website Functionalities](#8-website-functionalities)
     - [8.1 Overview](#81-overview)
-      - [8.1.2 The Home Page](#812-the-home-page)
+      - [8.1.2 The Launch Page](#812-the-launch-page)
+      - [8.1.3 The Language Page](#813-the-language-page)
+      - [8.1.4 The Home Page](#814-the-home-page)
+      - [8.1.5 The Barcode Scanning Page](#815-the-barcode-scanning-page)
 
 </details>
 
@@ -235,11 +238,25 @@ As on the image below, you firstly need to call the API. To do that, you have to
 
 The website will have 5 main pages (available in all the languages of the application) which are:
 
+- The Launch Page
+- The Language Page
 - The Home Page
-- The QR Code Scanning Page
+- The Barcode Scanning Page
 - The Product Page
 - The Localization Page
 
 Each following sections will talk about one of these pages.
 
-#### 8.1.2 The Home Page
+#### 8.1.2 The Launch Page
+
+The launch page is the first page that the user will see when he opens the application. It will contain the logo of the app and to access the language page, you need to click anywhere on the screen. <br>
+
+#### 8.1.3 The Language Page
+
+The language page is the second page that the user will see. The flags represent the languages available in the application that the user can choose. The user can click on the flag of the language he wants to use and then, he will be redirected to the home page in this language. <br>
+
+#### 8.1.4 The Home Page
+
+The home page is the main page of the application. In it, the user will retrieve the Best Sellers for Cheeses, Wines and recommendations of Recipes which goes well with the best sellers. If the user press one of the button in the form of the list above, he will be redirected to the product/recipe page allow him to see the description as well as have a better view of it. <br>
+
+#### 8.1.5 The Barcode Scanning Page
