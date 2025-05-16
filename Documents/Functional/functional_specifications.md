@@ -176,7 +176,7 @@ _The recipe page_
 
 Once a product or Recipe is selected, the app will recommend Intermarché products that match along with the product.
 
-![Schema of product recommendations system]()
+![Schema of product recommendations system](/Documents/Functional/Images/recommendation_workflow.png)
 
 _Schema of the recommendation system functionality._
 
@@ -184,11 +184,15 @@ _Schema of the recommendation system functionality._
 
 Intermarché Wine can be scanned using the product's [**EAN**](#glossary), directly redirecting them to the product page.
 
-![Product scanning system representation]()
+![Product scanning system representation](/Documents/Functional/Images/product_scanning.png)
 
 _Representation of how the scan works_
 
 ### 6. Audience
+
+![Use case1](/Documents/Functional/Images/use_case_1.png)
+
+![Use case2](/Documents/Functional/Images/use_case_2.png)
 
 ## IV. Non Functional Requirement
 
