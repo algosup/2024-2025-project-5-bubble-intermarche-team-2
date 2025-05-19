@@ -41,10 +41,17 @@
         - [B. How to connect to an external API?](#b-how-to-connect-to-an-external-api)
   - [8. Website Functionalities](#8-website-functionalities)
     - [8.1 Overview](#81-overview)
-      - [8.1.2 The Launch Page](#812-the-launch-page)
-      - [8.1.3 The Language Page](#813-the-language-page)
-      - [8.1.4 The Home Page](#814-the-home-page)
+      - [8.1.1 The Launch Page](#811-the-launch-page)
+      - [8.1.2 The Language Page](#812-the-language-page)
+      - [8.1.3 The Home Page](#813-the-home-page)
       - [8.1.5 The Barcode Scanning Page](#815-the-barcode-scanning-page)
+      - [8.1.5 The Product Page](#815-the-product-page)
+      - [8.1.6 The Recipe Page](#816-the-recipe-page)
+      - [8.1.7 The Localization Page](#817-the-localization-page)
+    - [8.2 Functionalities](#82-functionalities)
+      - [8.2.1 The Launch Page](#821-the-launch-page)
+      - [8.2.2 The Language Page](#822-the-language-page)
+      - [8.2.3 The Home Page](#823-the-home-page)
 
 </details>
 
@@ -236,27 +243,77 @@ As on the image below, you firstly need to call the API. To do that, you have to
 
 ### 8.1 Overview
 
-The website will have 5 main pages (available in all the languages of the application) which are:
+The website will have 7 main pages (available in all the languages of the application) which are:
 
 - The Launch Page
 - The Language Page
 - The Home Page
 - The Barcode Scanning Page
 - The Product Page
+- The Recipe Page
 - The Localization Page
 
 Each following sections will talk about one of these pages.
 
-#### 8.1.2 The Launch Page
+#### 8.1.1 The Launch Page
 
 The launch page is the first page that the user will see when he opens the application. It will contain the logo of the app and to access the language page, you need to click anywhere on the screen. <br>
 
-#### 8.1.3 The Language Page
+#### 8.1.2 The Language Page
 
 The language page is the second page that the user will see. The flags represent the languages available in the application that the user can choose. The user can click on the flag of the language he wants to use and then, he will be redirected to the home page in this language. <br>
 
-#### 8.1.4 The Home Page
+#### 8.1.3 The Home Page
 
-The home page is the main page of the application. In it, the user will retrieve the Best Sellers for Cheeses, Wines and recommendations of Recipes which goes well with the best sellers. If the user press one of the button in the form of the list above, he will be redirected to the product/recipe page allow him to see the description as well as have a better view of it. <br>
+The home page is the main page of the application. In it, the user will retrieve the Best Sellers for Cheeses, Wines and recommendations of Recipes which goes well with the best sellers. If the user press one of the button in the form of the list above, he will be send to the product/recipe page allow him to see the description as well as have a better view of it. <br>
 
 #### 8.1.5 The Barcode Scanning Page
+
+This page is used by the client to scan the barcode of a product. The app will then redirect the user to the product page of the scanned product. This possibility to scan the barcode is made possible thanks to a plugin in Bubble. <br>
+
+#### 8.1.5 The Product Page
+
+On the product page, the user will see the description of the product (wine or cheese) as well as the list of recipes that go well with it. The user can then click on one of the recipes to see its details. <br>
+
+#### 8.1.6 The Recipe Page
+
+<!--See after the lunch-->
+
+#### 8.1.7 The Localization Page
+
+The localization page is used to find a product in the supermarket but also to find the aisle where the product is located. It will work like a catalog. The user can search for a product by entering its name in the search bar and then clicking on the product overlay related to what is entered in. The difference between the "Can be Found Here" in the product page and the localization page is that the localization page will show the aisle where the product is located. <!-- Need to be discuss with Gregory--> <br>
+
+### 8.2 Functionalities
+
+Now that we have seen the pages of the application, let's see the functionalities of each ones.
+
+#### 8.2.1 The Launch Page
+
+When the user is on the launch page, a workflow is triggered to redirect the user to the language page when he clicks anywhere on his screen.
+
+```mermaid
+graph TD
+    A(Start) --> B{Does the user click on the screen?}
+    B -->|Yes| C[Go to the language page]
+    B -->|No| D[Do nothing]
+    C --> E(End)
+    D --> E
+```
+
+#### 8.2.2 The Language Page
+
+On the language page, the user has 2 options: choose the French language or the English language. When the user clicks on one of the flags, a workflow is started to redirect the user to the home page in the selected language.
+
+```mermaid
+graph TD
+    A(Start) --> B{Does the user click on the English flag?}
+    B -->|Yes| C[Go to the home page in English]
+    B -->|No| D{Does the user click on the French flag?}
+    D -->|Yes| E[Go to the home page in French]
+    D -->|No| F[Do nothing]
+    C --> G(End)
+    E --> G
+    F --> G
+```
+
+#### 8.2.3 The Home Page
