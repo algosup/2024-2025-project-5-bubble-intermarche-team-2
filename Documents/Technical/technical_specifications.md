@@ -44,7 +44,7 @@
       - [8.1.1 The Launch Page](#811-the-launch-page)
       - [8.1.2 The Language Page](#812-the-language-page)
       - [8.1.3 The Home Page](#813-the-home-page)
-      - [8.1.5 The Barcode Scanning Page](#815-the-barcode-scanning-page)
+      - [8.1.4 The Barcode Scanning Page](#814-the-barcode-scanning-page)
       - [8.1.5 The Product Page](#815-the-product-page)
       - [8.1.6 The Recipe Page](#816-the-recipe-page)
       - [8.1.7 The Localization Page](#817-the-localization-page)
@@ -267,7 +267,7 @@ The language page is the second page that the user will see. The flags represent
 
 The home page is the main page of the application. In it, the user will retrieve the Best Sellers for Cheeses, Wines and recommendations of Recipes which goes well with the best sellers. If the user press one of the button in the form of the list above, he will be send to the product/recipe page allow him to see the description as well as have a better view of it. <br>
 
-#### 8.1.5 The Barcode Scanning Page
+#### 8.1.4 The Barcode Scanning Page
 
 This page is used by the client to scan the barcode of a product. The app will then redirect the user to the product page of the scanned product. This possibility to scan the barcode is made possible thanks to a plugin in Bubble. <br>
 
@@ -277,7 +277,7 @@ On the product page, the user will see the description of the product (wine or c
 
 #### 8.1.6 The Recipe Page
 
-<!--See after the lunch-->
+The recipe page is used to see the details of a recipe. The user will see the description of the recipe and the list of products (wines and cheeses) that go well with it. To see its details, the user can click on the recipe they want. <br>
 
 #### 8.1.7 The Localization Page
 
@@ -317,3 +317,4 @@ graph TD
 ```
 
 #### 8.2.3 The Home Page
+
