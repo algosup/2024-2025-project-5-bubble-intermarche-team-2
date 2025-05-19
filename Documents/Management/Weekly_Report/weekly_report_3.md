@@ -52,4 +52,6 @@ On the development side, we started work on the application's front-end, but due
 
 ---
 
-Despite the challenges posed by exams and delays in client feedback, our team remained committed and adaptable. We made solid progress on both documentation and development, ensuring the project stayed on track. By staying organized and responsive, we maintained our momentum and are well-prepared for the upcoming tasks.
+Despite the challenges posed by exams and delays in client feedback, our team remained committed and adaptable. 
+We made solid progress on both documentation and development, ensuring the project stayed on track. 
+By staying organized and responsive, we maintained our momentum and are well-prepared for the upcoming tasks.

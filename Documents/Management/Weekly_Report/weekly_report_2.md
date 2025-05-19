@@ -58,4 +58,7 @@ This week was primarily dedicated to refining our mock-up. It also involved sign
 ## Conclusion
 ---
 
-This week marked a strong step forward for the team, with major progress in both documentation and preparation for development. Finalizing the mock-up and creating key management and quality assurance documents have laid a solid foundation. While some team members faced challenges in their new roles or learning tools, they showed initiative and problem-solving by seeking help and using recommended resources. The momentum is promising, and the team is well-positioned to begin development tasks next week.
+This week marked a strong step forward for the team, with major progress in both documentation and preparation for development.
+Finalizing the mock-up and creating key management and quality assurance documents have laid a solid foundation. 
+While some team members faced challenges in their new roles or learning tools, they showed initiative and problem-solving by seeking help and using recommended resources. 
+The momentum is promising, and the team is well-positioned to begin development tasks next week.

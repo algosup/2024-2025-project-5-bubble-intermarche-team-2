@@ -52,4 +52,5 @@ This week marked the beginning of the project. Consequently, most advancements w
 ## Conclusion
 ---
 
-Our team encountered several challenges during this first project week (time constraints, communication, etc.). However, the project has progressed well and appears to be on track to becoming an engaging and effective application.
+Our team encountered several challenges during this first project week (time constraints, communication, etc.). 
+However, the project has progressed well and appears to be on track to becoming an engaging and effective application.
