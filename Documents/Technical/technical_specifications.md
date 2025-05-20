@@ -45,13 +45,15 @@
       - [8.1.2 The Language Page](#812-the-language-page)
       - [8.1.3 The Home Page](#813-the-home-page)
       - [8.1.4 The Barcode Scanning Page](#814-the-barcode-scanning-page)
-      - [8.1.5 The Product Page](#815-the-product-page)
-      - [8.1.6 The Recipe Page](#816-the-recipe-page)
       - [8.1.7 The Localization Page](#817-the-localization-page)
     - [8.2 Functionalities](#82-functionalities)
       - [8.2.1 The Launch Page](#821-the-launch-page)
       - [8.2.2 The Language Page](#822-the-language-page)
       - [8.2.3 The Home Page](#823-the-home-page)
+        - [A. The Best Sellers](#a-the-best-sellers)
+        - [B. Repeating Group](#b-repeating-group)
+      - [8.2.4 The Barcode Scanning Page](#824-the-barcode-scanning-page)
+      - [8.2.5 The Product Page](#825-the-product-page)
 
 </details>
 
@@ -243,15 +245,15 @@ As on the image below, you firstly need to call the API. To do that, you have to
 
 ### 8.1 Overview
 
-The website will have 7 main pages (available in all the languages of the application) which are:
+The website will have 5 main pages and 2 Pop-ups (available in all the languages of the application) which are:
 
 - The Launch Page
 - The Language Page
 - The Home Page
 - The Barcode Scanning Page
-- The Product Page
-- The Recipe Page
 - The Localization Page
+- The Product Pop-up
+- The Recipe Pop-up
 
 Each following sections will talk about one of these pages.
 
@@ -271,13 +273,15 @@ The home page is the main page of the application. In it, the user will retrieve
 
 This page is used by the client to scan the barcode of a product. The app will then redirect the user to the product page of the scanned product. This possibility to scan the barcode is made possible thanks to a plugin in Bubble. <br>
 
-#### 8.1.5 The Product Page
+<!-- #### 8.1.5 The Product Pop-up
 
 On the product page, the user will see the description of the product (wine or cheese) as well as the list of recipes that go well with it. The user can then click on one of the recipes to see its details. <br>
 
-#### 8.1.6 The Recipe Page
+#### 8.1.6 The Recipe Pop-up
 
-The recipe page is used to see the details of a recipe. The user will see the description of the recipe and the list of products (wines and cheeses) that go well with it. To see its details, the user can click on the recipe they want. <br>
+The recipe page allows you to view a list of wines and cheeses that pair well with the dish. To access it, the user must click on the desired recipe. <br> --> 
+
+<!-- Need to be reworked since we using popups to display the recipes and wines/cheeses. -->
 
 #### 8.1.7 The Localization Page
 
@@ -317,4 +321,46 @@ graph TD
 ```
 
 #### 8.2.3 The Home Page
+
+##### A. The Best Sellers
+
+As explained above, in the home page, the user can see the best sellers for cheeses, wines and recipes. To allow the user to click on one of the buttons and go to the associated page, a workflow is triggered at this precise moment.
+
+```mermaid
+graph TD
+    A(Start) --> B{Does the user click on the Best Sellers for Cheeses button?}
+    B -->|Yes| C[Go to the product page of the best seller cheese]
+    B -->|No| D{Does the user click on the Best Sellers for Wines button?}
+    D -->|Yes| E[Go to the product page of the best seller wine]
+    D -->|No| F{Does the user click on the Recipes button?}
+    F -->|Yes| G[Go to the recipe page]
+    F -->|No| H[Do nothing]
+    C --> I(End)
+    E --> I
+    G --> I
+    H --> I
+```
+
+##### B. Repeating Group
+
+Additionally, from the developer's point of view, it will be decided to use the **Repeating Group** element to display best sellers. This element allows to display a list of items in a row without setup parameters to each display one by one. The data source for the repeating group will be the database containing cheeses, wines (with the attribute *yes* to "best sellers") and the recipe database. <br>
+
+#### 8.2.4 The Barcode Scanning Page
+
+When the user click on the related icon on the navigation bar, the app will redirect him to the barcode scanning page. Once on it, the plugin "Barcode Scanner" will be started. After the scan, the plugin will return the EAN code of the product (in background) and match it with the database. If the product is in the database, the app will send the user to the product page of the scanned product. <br>
+
+```mermaid
+graph TD
+    A(Start) --> B{Does the user scan a barcode?}
+    B -->|Yes| C[Get the EAN code of the product]
+    B -->|No| D[Do nothing]
+    C --> E{Is the product in the database?}
+    E -->|Yes| F[Go to the product page of the scanned product]
+    E -->|No| G[Return an error message]
+    F --> H(End)
+    D --> H
+    G --> H
+```
+
+#### 8.2.5 The Product Page
 
