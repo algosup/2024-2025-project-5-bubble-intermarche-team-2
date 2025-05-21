@@ -42,18 +42,24 @@
   - [8. Website Functionalities](#8-website-functionalities)
     - [8.1 Overview](#81-overview)
       - [8.1.1 The Launch Page](#811-the-launch-page)
-      - [8.1.2 The Language Page](#812-the-language-page)
-      - [8.1.3 The Home Page](#813-the-home-page)
-      - [8.1.4 The Barcode Scanning Page](#814-the-barcode-scanning-page)
-      - [8.1.7 The Localization Page](#817-the-localization-page)
+      - [8.1.2 The Home Page](#812-the-home-page)
+      - [8.1.3 The Barcode Scanning Page](#813-the-barcode-scanning-page)
+      - [8.1.4 The Localization Page](#814-the-localization-page)
+      - [8.1.5 The Product Pop-up](#815-the-product-pop-up)
+      - [8.1.6 The Recipe Pop-up](#816-the-recipe-pop-up)
+      - [8.1.7 The Language Dropdown](#817-the-language-dropdown)
     - [8.2 Functionalities](#82-functionalities)
       - [8.2.1 The Launch Page](#821-the-launch-page)
-      - [8.2.2 The Language Page](#822-the-language-page)
-      - [8.2.3 The Home Page](#823-the-home-page)
+      - [8.2.2 The Home Page](#822-the-home-page)
         - [A. The Best Sellers](#a-the-best-sellers)
         - [B. Repeating Group](#b-repeating-group)
-      - [8.2.4 The Barcode Scanning Page](#824-the-barcode-scanning-page)
-      - [8.2.5 The Product Page](#825-the-product-page)
+      - [8.2.3 The Barcode Scanning Page](#823-the-barcode-scanning-page)
+      - [8.2.4 The Localization Page](#824-the-localization-page)
+        - [A. The SearchBox](#a-the-searchbox)
+        - [B. The Map](#b-the-map)
+      - [8.2.5 The Product Pop-up](#825-the-product-pop-up)
+      - [8.2.6 The Recipe Pop-up](#826-the-recipe-pop-up)
+      - [8.2.7 The Language Dropdown](#827-the-language-dropdown)
 
 </details>
 
@@ -245,15 +251,15 @@ As on the image below, you firstly need to call the API. To do that, you have to
 
 ### 8.1 Overview
 
-The website will have 5 main pages and 2 Pop-ups (available in all the languages of the application) which are:
+The website will have 4 main pages and 3 Pop-ups/Dropdown (available in all the languages of the application) which are:
 
 - The Launch Page
-- The Language Page
 - The Home Page
 - The Barcode Scanning Page
 - The Localization Page
 - The Product Pop-up
 - The Recipe Pop-up
+- The Language Dropdown
 
 Each following sections will talk about one of these pages.
 
@@ -261,31 +267,29 @@ Each following sections will talk about one of these pages.
 
 The launch page is the first page that the user will see when he opens the application. It will contain the logo of the app and to access the language page, you need to click anywhere on the screen. <br>
 
-#### 8.1.2 The Language Page
-
-The language page is the second page that the user will see. The flags represent the languages available in the application that the user can choose. The user can click on the flag of the language he wants to use and then, he will be redirected to the home page in this language. <br>
-
-#### 8.1.3 The Home Page
+#### 8.1.2 The Home Page
 
 The home page is the main page of the application. In it, the user will retrieve the Best Sellers for Cheeses, Wines and recommendations of Recipes which goes well with the best sellers. If the user press one of the button in the form of the list above, he will be send to the product/recipe page allow him to see the description as well as have a better view of it. <br>
 
-#### 8.1.4 The Barcode Scanning Page
+#### 8.1.3 The Barcode Scanning Page
 
 This page is used by the client to scan the barcode of a product. The app will then redirect the user to the product page of the scanned product. This possibility to scan the barcode is made possible thanks to a plugin in Bubble. <br>
 
-<!-- #### 8.1.5 The Product Pop-up
+#### 8.1.4 The Localization Page
 
-On the product page, the user will see the description of the product (wine or cheese) as well as the list of recipes that go well with it. The user can then click on one of the recipes to see its details. <br>
+The localization page is used to find a product in the supermarket, more specifically to find the aisle where the product is located. It will work like a catalog. The user can search for a product by entering its name in the search bar and then clicking on the product overlay related to what is entered in. <!-- Need to be discuss with Gregory--> <br>
+
+#### 8.1.5 The Product Pop-up
+
+On the product pop-up, the user will see the description of the product (wine or cheese) as well as the list of recipes that go well with it. The user can then click on one of the recipes to see its details. <br>
 
 #### 8.1.6 The Recipe Pop-up
 
-The recipe page allows you to view a list of wines and cheeses that pair well with the dish. To access it, the user must click on the desired recipe. <br> --> 
+The recipe pop-up allows you to view a list of wines and cheeses that pair well with the dish. To access it, the user must click on the desired recipe. <br> 
 
-<!-- Need to be reworked since we using popups to display the recipes and wines/cheeses. -->
+#### 8.1.7 The Language Dropdown
 
-#### 8.1.7 The Localization Page
-
-The localization page is used to find a product in the supermarket but also to find the aisle where the product is located. It will work like a catalog. The user can search for a product by entering its name in the search bar and then clicking on the product overlay related to what is entered in. The difference between the "Can be Found Here" in the product page and the localization page is that the localization page will show the aisle where the product is located. <!-- Need to be discuss with Gregory--> <br>
+The language dropdown is used to change the language of the application. The user can choose between all the language that exist on Google Translate thanks to a plugin. <br>
 
 ### 8.2 Functionalities
 
@@ -304,23 +308,7 @@ graph TD
     D --> E
 ```
 
-#### 8.2.2 The Language Page
-
-On the language page, the user has 2 options: choose the French language or the English language. When the user clicks on one of the flags, a workflow is started to redirect the user to the home page in the selected language.
-
-```mermaid
-graph TD
-    A(Start) --> B{Does the user click on the English flag?}
-    B -->|Yes| C[Go to the home page in English]
-    B -->|No| D{Does the user click on the French flag?}
-    D -->|Yes| E[Go to the home page in French]
-    D -->|No| F[Do nothing]
-    C --> G(End)
-    E --> G
-    F --> G
-```
-
-#### 8.2.3 The Home Page
+#### 8.2.2 The Home Page
 
 ##### A. The Best Sellers
 
@@ -345,7 +333,7 @@ graph TD
 
 Additionally, from the developer's point of view, it will be decided to use the **Repeating Group** element to display best sellers. This element allows to display a list of items in a row without setup parameters to each display one by one. The data source for the repeating group will be the database containing cheeses, wines (with the attribute *yes* to "best sellers") and the recipe database. <br>
 
-#### 8.2.4 The Barcode Scanning Page
+#### 8.2.3 The Barcode Scanning Page
 
 When the user click on the related icon on the navigation bar, the app will redirect him to the barcode scanning page. Once on it, the plugin "Barcode Scanner" will be started. After the scan, the plugin will return the EAN code of the product (in background) and match it with the database. If the product is in the database, the app will send the user to the product page of the scanned product. <br>
 
@@ -362,5 +350,69 @@ graph TD
     G --> H
 ```
 
-#### 8.2.5 The Product Page
+#### 8.2.4 The Localization Page
+
+##### A. The SearchBox
+
+To find a product in the supermarket, the user can enter its name in the search bar. To do this, from a developer's perspective, we will use the **SearchBox** element. What differentiates it from traditional input is that it functions as a search engine rather than a simple input form. Indeed, when you start typing a word in the search bar, a drop-down menu appears just below where you type. This drop-down menu contains the list of products matching the entered word and the user can click on one of these products to display its information as well as its location. <br>
+
+##### B. The Map
+
+Regarding the map, all information related to the location of products in the supermarket is stored in the database. Once the user clicks on a product in the drop-down menu, the application displays the map with its location in the supermarket. <br>
+
+```mermaid
+graph TD
+    A(Start) --> B{Does the user enter a product name in the search bar?}
+    B -->|Yes| C[Display the drop-down menu with the list of products that correspond to the entered word]
+    B -->|No| D[Do nothing]
+    C --> E{Does the user click on a product in the drop-down menu?}
+    E -->|Yes| F[Display the map with the location of the product and its information]
+    E -->|No| G[Do nothing]
+    F --> H(End)
+    D --> H
+    G --> H
+```
+
+#### 8.2.5 The Product Pop-up
+
+When the user clicks on a product in the home page, the app will display a pop-up with the information of the product (wine or cheese) as well as the list of recipes that go well with it. <br>
+
+```mermaid
+graph TD
+    A(Start) --> B{Does the user click on a product?}
+    B -->|Yes| C[Display the pop-up with the information of the product]
+    B -->|No| D[Do nothing]
+    C --> E(End)
+    D --> E
+```
+
+#### 8.2.6 The Recipe Pop-up
+
+On the home page or in the Product Pop-up, it is possible to click on a specific recipe. When it's done, the app will display a pop-up with the list of wines and cheeses that go well with it. <br>
+
+```mermaid
+graph TD
+    A(Start) --> B{Does the user click on a recipe?}
+    B -->|Yes| C[Display the pop-up with the list of wines and cheeses that go well with it]
+    B -->|No| D[Do nothing]
+    C --> E(End)
+    D --> E
+```
+
+#### 8.2.7 The Language Dropdown
+
+This dropdown will be available on all pages of the application. For this, we will use the **Language Translation** plugin. When the user clicks on the dropdown, a list of languages will appear. The user can then select the desired language and the application will be translated into that language. To do that, the plugin will call a JS script that integrate a translate widget which be part of the GTranslate service. <br>
+
+```mermaid
+graph TD
+    A(Start) --> B{Does the user click on the language dropdown?}
+    B -->|Yes| C[Display the list of languages]
+    B -->|No| D[Do nothing]
+    C --> E{Does the user select a language?}
+    E -->|Yes| F[Translate the application into the selected language]
+    E -->|No| G[Do nothing]
+    F --> H(End)
+    D --> H
+    G --> H
+```
 
