@@ -67,13 +67,13 @@
 
 ## 1. Introduction
 
-The project goal is to develop with the Bubble technology[^1] a web application for the Intermarché St-Rémi-de-Provence supermarket. The application will allow customers to find cheeses and wines that pair well with the dishes they want to prepare (related to the ingredients there are in them). The application will be available in French as well as English.
+The project goal is to develop with the Bubble technology[^1] a web application for the Intermarché St-Rémi-de-Provence supermarket. The application will allow customers to find cheeses and wines that pair well with the dishes they want to prepare (related to the ingredients they contain). The application will be available in French as well as English.
 
 ## 2. Objectives
 
 - **It must be a mobile app**, ensuring offline access, geolocation, and preferences registration.
-- **The app should open swiftly** so they can access functionalities directly instead of taking time to log in/sign up instead of buying what they want.
-- **The app must be user-friendly** to make sure the user isn't lost in the app.
+- **The app should open swiftly** so they can access functionalities directly instead of taking time to log in/sign up and buying what they want.
+- **The app must be user-friendly** to make sure the user doesn't get lost in the app.
 - **Multiple languages must be implemented** for a wider public due to the touristic flux of the region.
 
 ## 3. GitHub Folder Structure
@@ -173,7 +173,7 @@ If you want to create an application with multiple sections/pages, you must crea
 
 #### 7.1.2 Drag & Drop Menu
 
-To add an element (like we see at the top of the section), you can drag and drop it from the bar on the left side, as shown in the image. They act like flex containers[^3] in HTML[^4], allowing you to group elements but also, put them in a Row, Column with a Space Between each element in the container, and so on. <br>
+To add an element (as we see at the top of the section), you can drag and drop it from the bar on the left side, as shown in the image. They act like flex containers[^3] in HTML[^4], allowing you to group elements but also, put them in a Row, Column with a Space Between each element in the container, and so on. <br>
 
 ![Drag & Drop Menu](/Documents/Technical/Images/drag_&_drop_menu.jpeg)
 
@@ -399,11 +399,11 @@ graph TD
 
 ##### B. Repeating Group
 
-Additionally, from the developer's point of view, it will be decided to use the **Repeating Group** element to display best sellers. This element allows to display a list of items in a row without setup parameters to each display one by one. The data source for the repeating group will be the database containing cheeses, wines (with the attribute *yes* to "best sellers"), and the recipe database. <br>
+Additionally, from the developer's point of view, it will be decided to use the **Repeating Group** element to display best sellers. This element allows Bubble to display a list of items in a row without having to configure each display one by one. The data source for the repeating group will be the database containing cheeses, wines (with the attribute *yes* to "best sellers"), and the recipe database. <br>
 
 #### 8.2.3 The Barcode Scanning Page
 
-When the user clicks on the related icon on the navigation bar, the app will redirect him to the barcode scanning page. Once on it, the plugin "Barcode Scanner" will be started after clicking on a button to launch it. After the scan, the plugin will return the EAN code of the product (in the background) and match it with the database. If the product is in the database, the app will display the information of the scanned product just below. <br>
+When the user clicks on the related icon on the navigation bar, the app will redirect him to the barcode scanning page. Once on it, the plugin "Barcode Scanner" will be started after clicking on a button to launch it. After the scan, the plugin will return the EAN code of the product (in the background) and match it to the database. If the product is in the database, the app will display the information of the scanned product just below. <br>
 
 ```mermaid
 graph TD
@@ -422,7 +422,7 @@ graph TD
 
 ##### A. The SearchBox
 
-To find a product in the catalog, the user enters its name in the search bar. To do this, from a developer's point of view, we will use the **SearchBox** element. What differentiates it from traditional input is that it functions as a search engine rather than a simple input form. Indeed, when you start typing a word in the search bar, a dropdown menu appears just below where you type. This dropdown menu contains the list of products matching the entered word and the user can click on one of these products to display it in the Catalog and click on it to obtain its information. <br>
+To find a product in the catalog, the user enters its name in the search bar. To do this, from a developer's point of view, we will use the **SearchBox** element. What differentiates it from traditional input is that it functions as a search engine rather than just a simple input form. Indeed, when you start typing a word in the search bar, a dropdown menu appears just below where you type. This dropdown menu contains the list of products matching the entered word and the user can click on one of these products to display it in the Catalog and click on it to obtain its information. <br>
 
 ##### B. Filtering Products
 
@@ -477,13 +477,13 @@ About the workflow, it is indicated in the [**The pop-ups apparition** section](
 
 #### 8.2.7 The Recipe Pop-up
 
-On the home page or in the Product Pop-up, it is possible to click on a specific recipe. When it's done, the app will display a pop-up with the list of wines and cheeses that go well with it as well as its description and name (according to the database). <br>
+On the home page or in the Product Pop-up, it is possible to click on a specific recipe. When it's done, the app will display a pop-up with the list of wines and cheeses that go well with the recipe as well as its description and name (according to the database). <br>
 
-As the product pop-up, the workflow is the same as the one in the [**The pop-ups apparition** section](#721-workflow-menu). <br>
+As for the product pop-up, the workflow is the same as the one in the [**The pop-ups apparition** section](#721-workflow-menu). <br>
 
 #### 8.2.8 The Language Dropdown
 
-This dropdown will be available on all pages of the application. For this, we will use the **Language Translation** plugin. When the user clicks on the dropdown, a list of languages will appear. The user can then select the desired language and the application will be translated into that language. To do that, the plugin will call a JS script that integrates a translate widget which is part of the GTranslate service. <br>
+This dropdown will be available on all pages of the application. For this, we will use the **Language Translation** plugin. When the user clicks on the dropdown, a list of languages will appear. The user can then select the desired language and the application will be automatically translated into that language. To do that, the plugin will call a JS script that integrates a translate widget which is part of the GTranslate service. <br>
 
 ```mermaid
 graph TD
