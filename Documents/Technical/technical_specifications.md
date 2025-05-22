@@ -36,30 +36,32 @@
         - [A. What is it?](#a-what-is-it)
         - [B. The Logic of the Application](#b-the-logic-of-the-application)
       - [7.2.2 The Database](#722-the-database)
-      - [7.2.3 The API Connector](#723-the-api-connector)
-        - [A. What is it?](#a-what-is-it-1)
-        - [B. How to connect to an external API?](#b-how-to-connect-to-an-external-api)
   - [8. Website Functionalities](#8-website-functionalities)
     - [8.1 Overview](#81-overview)
       - [8.1.1 The Launch Page](#811-the-launch-page)
       - [8.1.2 The Home Page](#812-the-home-page)
       - [8.1.3 The Barcode Scanning Page](#813-the-barcode-scanning-page)
-      - [8.1.4 The Localization Page](#814-the-localization-page)
-      - [8.1.5 The Product Pop-up](#815-the-product-pop-up)
-      - [8.1.6 The Recipe Pop-up](#816-the-recipe-pop-up)
-      - [8.1.7 The Language Dropdown](#817-the-language-dropdown)
+      - [8.1.4 The Catalog Page](#814-the-catalog-page)
+      - [8.1.5 The Localization Page](#815-the-localization-page)
+      - [8.1.6 The Product Pop-up](#816-the-product-pop-up)
+      - [8.1.7 The Recipe Pop-up](#817-the-recipe-pop-up)
+      - [8.1.8 The Language Dropdown](#818-the-language-dropdown)
     - [8.2 Functionalities](#82-functionalities)
       - [8.2.1 The Launch Page](#821-the-launch-page)
       - [8.2.2 The Home Page](#822-the-home-page)
         - [A. The Best Sellers](#a-the-best-sellers)
         - [B. Repeating Group](#b-repeating-group)
       - [8.2.3 The Barcode Scanning Page](#823-the-barcode-scanning-page)
-      - [8.2.4 The Localization Page](#824-the-localization-page)
+      - [8.2.4 The Catalog Page](#824-the-catalog-page)
         - [A. The SearchBox](#a-the-searchbox)
+        - [B. Filtering Products](#b-filtering-products)
+      - [8.2.5 The Localization Page](#825-the-localization-page)
+        - [A. The SearchBox](#a-the-searchbox-1)
         - [B. The Map](#b-the-map)
-      - [8.2.5 The Product Pop-up](#825-the-product-pop-up)
-      - [8.2.6 The Recipe Pop-up](#826-the-recipe-pop-up)
-      - [8.2.7 The Language Dropdown](#827-the-language-dropdown)
+        - [C. The Workflow for the Localization Page](#c-the-workflow-for-the-localization-page)
+      - [8.2.6 The Product Pop-up](#826-the-product-pop-up)
+      - [8.2.7 The Recipe Pop-up](#827-the-recipe-pop-up)
+      - [8.2.8 The Language Dropdown](#828-the-language-dropdown)
 
 </details>
 
@@ -69,11 +71,10 @@ The project goal is to develop with the Bubble technology[^1] a web application 
 
 ## 2. Objectives
 
-- 
-- 
-- 
-- 
-- 
+- **It must be a mobile app**, ensuring offline access, geolocation, and preferences registration.
+- **The app should open swiftly** so they can access functionalities directly instead of taking time to log in/sign up instead of buying what they want.
+- **The app must be user-friendly** to make sure the user isn't lost in the app.
+- **Multiple languages must be implemented** for a wider public due to the touristic flux of the region.
 
 ## 3. GitHub Folder Structure
 
@@ -83,7 +84,7 @@ The project goal is to develop with the Bubble technology[^1] a web application 
 │   ├── workflows # GitHub Actions folder -> Contain the scripts that will automatically run
 │   │   └── main.yml # GitHub Actions script to merge the main branch into the sub-branches
 │   │
-│   └── ISSUE_TEMPLATE # GitHub issue template folder -> Contains the templates for issues
+│   └── ISSUE_TEMPLATE # GitHub issue template folder -> Contains the templates for the issues
 │
 ├── Documents # Stores all the documents related to the project
 │   ├── Functional
@@ -108,7 +109,7 @@ The project goal is to develop with the Bubble technology[^1] a web application 
 │      └── user_manual.pdf
 │
 ├── Src # Stores the link to the Bubble project (since Bubble is a no-code platform)
-│  └── bubble_project.md # Change this file name when we'll know how to name it
+│  └── bubble_project.md # Link to the Bubble project
 │
 ├── .gitignore # Ignore files and folders in the repository
 └── README.md # Project description and instructions to run the project
@@ -116,7 +117,7 @@ The project goal is to develop with the Bubble technology[^1] a web application 
 
 ## 4. Conventions
 
-To ensure the coordination of the document, names and so on, conventions are set up in this project. Below are the conventions used in this project:
+To ensure the coordination of the document, names, and so on, conventions are set up in this project. Below are the conventions used in this project:
 
 | Type              | Example Name          | Convention        |
 | ----------------- | --------------------- | ----------------- |
@@ -131,7 +132,7 @@ To ensure the coordination of the document, names and so on, conventions are set
 | API Calls         | `GoodNameOfAPI`       | PascalCase        |
 
 > [!caution] Elements Naming Conventions
-> To avoid all misunderstandings regarding to an element in Bubble, the name of the element must be in **Title Case** preceded by its type (except for groups). <br>
+> To avoid all misunderstandings regarding an element in Bubble, the name of the element must be in **Title Case** preceded by its type (except for groups). <br>
 > For example, if the element is an *Input*, its name should be "Input Zip Code".
 
 <br>
@@ -147,21 +148,20 @@ Before going further, it is highly recommended to read the [Functional Specifica
 The following technologies are used in this project:
 
 - **Bubble**: No-code platform to develop the web application.
-- **Bubble Plugin**: Additional plugins to enhance the application (e.g., API Connector, Google Maps, etc.).
+- **Bubble Plugin**: Additional plugins to enhance the application (e.g., API Connector, Barcode Scanner, etc.).
 - **Bubble Database**: Database to store the data of the application.
 
 All these technologies are used directly on the Bubble platform. Therefore, there is no need to install anything more in the application. <br>
 
 ### 6.2 How will it work?
 
-We will have to side on our application, a front-end side (the visible part of the application) and a back-end side (the database). <br>
-As an **input** of the application, the app will ask the user to enter the name of the dish they want to prepare. The app then searches the database for the ingredients of that dish, if one exists, and displays a list of cheeses and wines that pair well with it. <br>
-To find the best pairings, we will use the **API Connector** plugin to connect to an external API <!--(we need to find it)--> that provides information about cheeses and wines. As complementary information of this API, we will consult some of the most common association on an expert site. <br>
-The **output** of the application will be the list of cheeses and wines displayed on the screen, the user interface (referred to the front-end above). 
+We will have two sides on our application, a front-end side (the visible part of the application) and a back-end side (the database + all the workflows). <br>
+- As an **input** of the application, we will have the user who will interact with the application. The user will be able to enter data (e.g., scan a barcode, search for a *cheese or wine* product, etc.) and the application will process these data to provide the desired output. <br>
+- The **output** of the application will be the data displayed to the user (e.g., recipes, products, etc.) and the actions performed by the application (e.g., store data in the database, execute workflow, etc.). <br>
 
 ## 7. Bubble Platform
 
-Bubble is a no-code platform that allows to create web applications without any programming knowledge. To create an application, we place blocks, more precisely called elements, on a page and define their properties to create a rendering similar to an HTML page. <br>
+Bubble is a no-code platform that allows the creation of web applications without any programming knowledge. To create an application, we place blocks, more precisely called **elements**, on a page and define their properties to create a rendering similar to an HTML[^2] page. <br>
 
 ### 7.1 Front-end
 
@@ -173,13 +173,13 @@ If you want to create an application with multiple sections/pages, you must crea
 
 #### 7.1.2 Drag & Drop Menu
 
-To add an element (like we see at the top of the section), you can drag and drop it from the bar on the left side, as shown on the image. They act like flex containers in HTML, allowing you to group elements but also, put them in Row, Column with a Space Between each element in the container, and so on. <br>
+To add an element (like we see at the top of the section), you can drag and drop it from the bar on the left side, as shown in the image. They act like flex containers[^3] in HTML[^4], allowing you to group elements but also, put them in a Row, Column with a Space Between each element in the container, and so on. <br>
 
 ![Drag & Drop Menu](/Documents/Technical/Images/drag_&_drop_menu.jpeg)
 
 #### 7.1.3 Styles Menu
 
-The styles menu is used to customize the appearance of the elements in the application. You can change the font, color, size, and other properties of the elements. Changes made here apply to all elements of the same type (like a CSS tag in a style sheet). <br>
+The styles menu is used to customize the appearance of the elements in the application. You can change the font, color, size, and other properties of the elements. Changes made here apply to all elements of the same type (like a CSS tag[^4] in a style sheet). <br>
 
 ![Styles Menu](/Documents/Technical/Images/styles_menu.jpeg)
 
@@ -193,9 +193,20 @@ The workflow menu is used to create the logic of the application. It allows you 
 
 ##### B. The Logic of the Application
 
-Examples of two workflows that will be used in the application:
+1. The Navbar
 
-- When the user clicks on the "Home" button in the Navbar, the app will navigate to the home page
+    <u>1.1. Explanation of the Navbar</u>
+
+     - When the user clicks on the "Home" button in the Navbar, the app will navigate to the home page.
+
+     - When the user clicks on the "QR Code" button in the Navbar, the app will navigate to the QR Code reader page
+
+     - When the user clicks on the "Catalog" button in the Navbar, the app will navigate to the catalog page.
+
+     - When the user clicks on the "Localization" button in the Navbar, the app will navigate to the localization page.
+
+    <u>1.2. Workflow of the Navbar</u>
+
 
 ```mermaid
 graph TD
@@ -206,19 +217,81 @@ graph TD
     D --> E
 ```
 
-- When the user enters that he has a allergy to a specific ingredient, the app will put it in the database and will warn the user that there is the ingredient in the dish he watches.
+<br><br>
+
+2. The pop-ups
+
+When the user clicks on a recipe or product on the home page or catalog, the application will display a pop-up window with the details of these (depending on what was chosen).
 
 ```mermaid
 graph TD
-    A(Start) --> B{Does the user enter an allergy?}
-    B -->|Yes| C[Put the allergy in the database]
-    B -->|No| F
-    C --> D{Is there an ingredient in the dish that matches the allergy?}
-    D -->|Yes| E[Warn the user]
-    D -->|No| F[Do nothing]
+    A(Start) --> B{Does the user click on a recipe or product?}
+    B -->|Yes| C[Display the pop-up with the details of the recipe or product]
+    B -->|No| D[Do nothing]
+    C --> E(End)
+    D --> E
+```
+<br>
+In the same way, the pop-up is closable. To do that, the user has to click on the "Close" button.
+
+```mermaid
+graph TD
+    A(Start) --> B{Does the user click on the Close button}
+    B -->|Yes| C[Close the Pop-up]
+    B -->|No| D[Let the Pop-up open]
+    C --> E(End)
+    D --> E
+```
+<br><br>
+
+3. The Matching System
+
+    <u>3.1. Matching for a Product</u>
+
+      - When a cheese is selected by the user, 4 recipes and 4 wines will be recommended based on a matching rank (from 1 to 5).
+      - Also, when a wine is selected by the user, 4 recipes and 4 cheeses will be recommended based on the same matching rank.
+
+      Here is the workflow for the wine matching:
+
+<br>
+
+```mermaid
+graph TD
+    A(Start) --> B{Does the wine go well with the cheese based on the scale rate?}
+    B -->|Yes because rated between 3 and 5| C{Is the wine local?}
+    B -->|No because under 3| D[Don't display the wine]
+    C --> |Yes| E[Recommend above all wines of the same rating]
+    C --> |No| F[Recommend after the featured wines]
     E --> G(End)
     F --> G
+    D --> G
 ```
+
+*Note that the same workflow will be used for the cheese. To see it, just replace the word "wine" by "cheese" and vice versa.*
+
+<br>
+
+  <u>3.2. Matching for a Recipe</u>
+    
+  When a recipe is selected by the user, 4 cheeses and 4 wines will be recommended always based on this matching rank but for this one, the workflow is a bit different.
+
+  Here is the workflow for the recipe:
+
+```mermaid
+graph TD
+    A(Start) --> B{Does the recipe go well with the cheese and the wine based on the scale rate?}
+    B -->|Yes because rated between 3 and 5| C{Is the cheese and the wine local?}
+    B -->|No because under 3| D[Don't display the cheeses and wines]
+    C --> |Yes| E[Recommend above all cheeses and wines of the same rating]
+    C --> |No| F[Recommend after the featured cheeses and wines]
+    E --> G(End)
+    F --> G
+    D --> G
+```
+
+*Note that there will be 2 separate recommendation sections in the Recipe Pop-up: one for wine and one for cheese*
+
+<br>
 
 #### 7.2.2 The Database
 
@@ -227,41 +300,32 @@ The database is used to store all the data of the application. It is divided int
 Here is an example of a table that will be used in the application:
 
 - Recipes:
-  - Name: The name of the recipe
-  - Pictures: The pictures of the recipe
-  - Category: The category of the recipe (e.g., starter, main course, dessert, etc.)
-- Association:
-  - Wine: The list of Wine Products that are stored in the database
-  - Cheese: The list of Cheese Products that are stored in the database
-  - Match Score: The score of the match between the cheese and the wine based on the external API and the expert site
+  - Name: The name of the recipe
+  - Pictures: The pictures of the recipe
+  - Category: The category of the recipe (e.g., starter, main course, dessert, etc.)
+- Matching:
+  - Wine: The list of Wine Products that are stored in the database
+  - Cheese: The list of Cheese Products that are stored in the database
+  - Recipe: The list of Recipes that are stored in the database
+  - Match Score: The score of the match between the cheese and the wine based on the external API and the expert site
 
-#### 7.2.3 The API Connector
-
-##### A. What is it?
-
-The API Connector is a plugin that allows you to connect to external APIs. It is used to retrieve data from these and in this case, store them in the database in order to reutilize these data for matching score between recipes and wines/cheeses. <br>
-
-##### B. How to connect to an external API?
-
-As on the image below, you firstly need to call the API. To do that, you have to give a name to the API and the call. Then, as usual in a programming language, you must define the method (GET, POST, etc.) and the URL of the API but with the particularity that you need to remove the parameters and replace them by brackets and define a pair key-value for each parameters. Finally, as in the C++ language, you can define the visibility of the parameters (private or public).
-
-![API Connector](/Documents/Technical/Images/api_connector.png)
 
 ## 8. Website Functionalities
 
 ### 8.1 Overview
 
-The website will have 4 main pages and 3 Pop-ups/Dropdown (available in all the languages of the application) which are:
+The website will have 5 main pages and 3 Pop-ups/Dropdown (available in all the languages of the application) which are:
 
 - The Launch Page
 - The Home Page
 - The Barcode Scanning Page
+- The Catalog Page
 - The Localization Page
 - The Product Pop-up
 - The Recipe Pop-up
 - The Language Dropdown
 
-Each following sections will talk about one of these pages.
+Each following section will talk about one of these pages.
 
 #### 8.1.1 The Launch Page
 
@@ -269,31 +333,35 @@ The launch page is the first page that the user will see when he opens the appli
 
 #### 8.1.2 The Home Page
 
-The home page is the main page of the application. In it, the user will retrieve the Best Sellers for Cheeses, Wines and recommendations of Recipes which goes well with the best sellers. If the user press one of the button in the form of the list above, he will be send to the product/recipe page allow him to see the description as well as have a better view of it. <br>
+The home page is the main page of the application. In it, the user will retrieve the Best Sellers for Cheeses, Wines, and recommendations of Recipes that go well with the best sellers. If the user presses one of the buttons in the form of the list above, the product/recipe pop-up will be displayed, allowing him to see the description as well as have a better view of it. <br>
 
 #### 8.1.3 The Barcode Scanning Page
 
-This page is used by the client to scan the barcode of a product. The app will then redirect the user to the product page of the scanned product. This possibility to scan the barcode is made possible thanks to a plugin in Bubble. <br>
+This page is used by the client to scan the barcode of a product. The app will then display the scanned product's information below. This possibility to scan the barcode is made possible thanks to a plugin in Bubble. <br>
 
-#### 8.1.4 The Localization Page
+#### 8.1.4 The Catalog Page
 
-The localization page is used to find a product in the supermarket, more specifically to find the aisle where the product is located. It will work like a catalog. The user can search for a product by entering its name in the search bar and then clicking on the product overlay related to what is entered in. <!-- Need to be discuss with Gregory--> <br>
+The catalog is used to display all the products available in the application. The user can filter the products by category (cheese, wine) and sub-categories (e.g., White Wine, Cow's Cheese, etc.) and then search for a specific product. Like in the Home Page, if the user clicks on a product, it will display the related pop-up. <br>
 
-#### 8.1.5 The Product Pop-up
+#### 8.1.5 The Localization Page
+
+The localization page is used to find a product in the supermarket, more specifically to find the aisle where the product is located. It will work like the catalog. The user can search for a product by entering its name in the search bar and then clicking on the product overlay related to what is entered. <br>
+
+#### 8.1.6 The Product Pop-up
 
 On the product pop-up, the user will see the description of the product (wine or cheese) as well as the list of recipes that go well with it. The user can then click on one of the recipes to see its details. <br>
 
-#### 8.1.6 The Recipe Pop-up
+#### 8.1.7 The Recipe Pop-up
 
-The recipe pop-up allows you to view a list of wines and cheeses that pair well with the dish. To access it, the user must click on the desired recipe. <br> 
+The recipe pop-up allows you to view a list of wines and cheeses that pair well with the dish and its description. To access it, the user must click on the desired recipe. <br> 
 
-#### 8.1.7 The Language Dropdown
+#### 8.1.8 The Language Dropdown
 
-The language dropdown is used to change the language of the application. The user can choose between all the language that exist on Google Translate thanks to a plugin. <br>
+The language dropdown is used to change the language of the application. The user can choose between all the languages that exist on Google Translate thanks to a plugin. <br>
 
 ### 8.2 Functionalities
 
-Now that we have seen the pages of the application, let's see the functionalities of each ones.
+Now that we have seen the pages of the application, let's see the functionalities of each one.
 
 #### 8.2.1 The Launch Page
 
@@ -312,16 +380,16 @@ graph TD
 
 ##### A. The Best Sellers
 
-As explained above, in the home page, the user can see the best sellers for cheeses, wines and recipes. To allow the user to click on one of the buttons and go to the associated page, a workflow is triggered at this precise moment.
+As explained above, on the home page, the user can see the best sellers for cheeses, wines, and recipes. To allow the user to click on one of the buttons and go to the associated page, a workflow is triggered at this precise moment.
 
 ```mermaid
 graph TD
     A(Start) --> B{Does the user click on the Best Sellers for Cheeses button?}
-    B -->|Yes| C[Go to the product page of the best seller cheese]
+    B -->|Yes| C[Display the product pop-up of the best seller cheese]
     B -->|No| D{Does the user click on the Best Sellers for Wines button?}
-    D -->|Yes| E[Go to the product page of the best seller wine]
+    D -->|Yes| E[Display the product pop-up of the best seller wine]
     D -->|No| F{Does the user click on the Recipes button?}
-    F -->|Yes| G[Go to the recipe page]
+    F -->|Yes| G[Display the recipe pop-up]
     F -->|No| H[Do nothing]
     C --> I(End)
     E --> I
@@ -331,11 +399,11 @@ graph TD
 
 ##### B. Repeating Group
 
-Additionally, from the developer's point of view, it will be decided to use the **Repeating Group** element to display best sellers. This element allows to display a list of items in a row without setup parameters to each display one by one. The data source for the repeating group will be the database containing cheeses, wines (with the attribute *yes* to "best sellers") and the recipe database. <br>
+Additionally, from the developer's point of view, it will be decided to use the **Repeating Group** element to display best sellers. This element allows to display a list of items in a row without setup parameters to each display one by one. The data source for the repeating group will be the database containing cheeses, wines (with the attribute *yes* to "best sellers"), and the recipe database. <br>
 
 #### 8.2.3 The Barcode Scanning Page
 
-When the user click on the related icon on the navigation bar, the app will redirect him to the barcode scanning page. Once on it, the plugin "Barcode Scanner" will be started. After the scan, the plugin will return the EAN code of the product (in background) and match it with the database. If the product is in the database, the app will send the user to the product page of the scanned product. <br>
+When the user clicks on the related icon on the navigation bar, the app will redirect him to the barcode scanning page. Once on it, the plugin "Barcode Scanner" will be started after clicking on a button to launch it. After the scan, the plugin will return the EAN code of the product (in the background) and match it with the database. If the product is in the database, the app will display the information of the scanned product just below. <br>
 
 ```mermaid
 graph TD
@@ -343,22 +411,50 @@ graph TD
     B -->|Yes| C[Get the EAN code of the product]
     B -->|No| D[Do nothing]
     C --> E{Is the product in the database?}
-    E -->|Yes| F[Go to the product page of the scanned product]
+    E -->|Yes| F[Display the information of the scanned product]
     E -->|No| G[Return an error message]
     F --> H(End)
     D --> H
     G --> H
 ```
 
-#### 8.2.4 The Localization Page
+#### 8.2.4 The Catalog Page
 
 ##### A. The SearchBox
 
-To find a product in the supermarket, the user can enter its name in the search bar. To do this, from a developer's perspective, we will use the **SearchBox** element. What differentiates it from traditional input is that it functions as a search engine rather than a simple input form. Indeed, when you start typing a word in the search bar, a drop-down menu appears just below where you type. This drop-down menu contains the list of products matching the entered word and the user can click on one of these products to display its information as well as its location. <br>
+To find a product in the catalog, the user enters its name in the search bar. To do this, from a developer's point of view, we will use the **SearchBox** element. What differentiates it from traditional input is that it functions as a search engine rather than a simple input form. Indeed, when you start typing a word in the search bar, a dropdown menu appears just below where you type. This dropdown menu contains the list of products matching the entered word and the user can click on one of these products to display it in the Catalog and click on it to obtain its information. <br>
+
+##### B. Filtering Products
+
+On the catalog page, the user can filter products by category and sub-category. To do this, we will use the **Dropdown** element and search for all categories (and sub-categories) saved in the database, then list them in the dropdown.
+
+```mermaid
+graph TD
+    A(Start) --> B{Does the user select a category?}
+    B -->|Yes| C[Display the list of products that correspond to the selected category]
+    B -->|No| D[Do nothing]
+    C --> E{Does the user select a sub-category?}
+    D --> E
+    E -->|Yes| F{Did the user also select a category?}
+    F -->|Yes| G[Display the list of products that correspond to the selected category and sub-category]
+    G --> J(End)
+    F -->|No| H[Display the list of products that correspond to the selected sub-category]
+    H --> J
+    E -->|No| I[Do nothing]
+    I --> J
+```
+
+#### 8.2.5 The Localization Page
+
+##### A. The SearchBox
+
+To find a product in the supermarket, the user can enter its name in the search bar. To do this, from a developer's perspective, we will use the **SearchBox** element. The tool being the same as before in the Catalog Page, we will skip the explanations. However, the drop-down menu of this page is quite different from the previous one. It contains the list of products matching the entered word and the user can click on one of these products to display its information as well as its **location**. <br>
 
 ##### B. The Map
 
 Regarding the map, all information related to the location of products in the supermarket is stored in the database. Once the user clicks on a product in the drop-down menu, the application displays the map with its location in the supermarket. <br>
+
+##### C. The Workflow for the Localization Page
 
 ```mermaid
 graph TD
@@ -373,35 +469,21 @@ graph TD
     G --> H
 ```
 
-#### 8.2.5 The Product Pop-up
+#### 8.2.6 The Product Pop-up
 
-When the user clicks on a product in the home page, the app will display a pop-up with the information of the product (wine or cheese) as well as the list of recipes that go well with it. <br>
+When the user clicks on a product on the home page, the app will display a pop-up with information about the product (wine or cheese) as well as the list of recipes that go well with it. <br>
 
-```mermaid
-graph TD
-    A(Start) --> B{Does the user click on a product?}
-    B -->|Yes| C[Display the pop-up with the information of the product]
-    B -->|No| D[Do nothing]
-    C --> E(End)
-    D --> E
-```
+About the workflow, it is indicated in the [**The pop-ups apparition** section](#b-the-logic-of-the-application). <br>
 
-#### 8.2.6 The Recipe Pop-up
+#### 8.2.7 The Recipe Pop-up
 
-On the home page or in the Product Pop-up, it is possible to click on a specific recipe. When it's done, the app will display a pop-up with the list of wines and cheeses that go well with it. <br>
+On the home page or in the Product Pop-up, it is possible to click on a specific recipe. When it's done, the app will display a pop-up with the list of wines and cheeses that go well with it as well as its description and name (according to the database). <br>
 
-```mermaid
-graph TD
-    A(Start) --> B{Does the user click on a recipe?}
-    B -->|Yes| C[Display the pop-up with the list of wines and cheeses that go well with it]
-    B -->|No| D[Do nothing]
-    C --> E(End)
-    D --> E
-```
+As the product pop-up, the workflow is the same as the one in the [**The pop-ups apparition** section](#721-workflow-menu). <br>
 
-#### 8.2.7 The Language Dropdown
+#### 8.2.8 The Language Dropdown
 
-This dropdown will be available on all pages of the application. For this, we will use the **Language Translation** plugin. When the user clicks on the dropdown, a list of languages will appear. The user can then select the desired language and the application will be translated into that language. To do that, the plugin will call a JS script that integrate a translate widget which be part of the GTranslate service. <br>
+This dropdown will be available on all pages of the application. For this, we will use the **Language Translation** plugin. When the user clicks on the dropdown, a list of languages will appear. The user can then select the desired language and the application will be translated into that language. To do that, the plugin will call a JS script that integrates a translate widget which is part of the GTranslate service. <br>
 
 ```mermaid
 graph TD
@@ -415,4 +497,3 @@ graph TD
     D --> H
     G --> H
 ```
-
