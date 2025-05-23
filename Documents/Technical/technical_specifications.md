@@ -33,8 +33,8 @@
       - [7.1.3 Styles Menu](#713-styles-menu)
     - [7.2 Back-end](#72-back-end)
       - [7.2.1 Workflow Menu](#721-workflow-menu)
-        - [A. What is it?](#a-what-is-it)
-        - [B. The Logic of the Application](#b-the-logic-of-the-application)
+        - [7.2.1.A. What is it?](#721a-what-is-it)
+        - [7.2.1.B. The Logic of the Application](#721b-the-logic-of-the-application)
       - [7.2.2 The Database](#722-the-database)
   - [8. Website Functionalities](#8-website-functionalities)
     - [8.1 Overview](#81-overview)
@@ -49,16 +49,16 @@
     - [8.2 Functionalities](#82-functionalities)
       - [8.2.1 The Launch Page](#821-the-launch-page)
       - [8.2.2 The Home Page](#822-the-home-page)
-        - [A. The Best Sellers](#a-the-best-sellers)
-        - [B. Repeating Group](#b-repeating-group)
+        - [8.2.2.A. The Best Sellers](#822a-the-best-sellers)
+        - [8.2.2.B. Repeating Group](#822b-repeating-group)
       - [8.2.3 The Barcode Scanning Page](#823-the-barcode-scanning-page)
       - [8.2.4 The Catalog Page](#824-the-catalog-page)
-        - [A. The SearchBox](#a-the-searchbox)
-        - [B. Filtering Products](#b-filtering-products)
+        - [8.2.4.A. The SearchBox](#824a-the-searchbox)
+        - [8.2.4.B. Filtering Products](#824b-filtering-products)
       - [8.2.5 The Localization Page](#825-the-localization-page)
-        - [A. The SearchBox](#a-the-searchbox-1)
-        - [B. The Map](#b-the-map)
-        - [C. The Workflow for the Localization Page](#c-the-workflow-for-the-localization-page)
+        - [8.2.5.A. The SearchBox](#825a-the-searchbox)
+        - [8.2.5.B. The Map](#825b-the-map)
+        - [8.2.5.C. The Workflow for the Localization Page](#825c-the-workflow-for-the-localization-page)
       - [8.2.6 The Product Pop-up](#826-the-product-pop-up)
       - [8.2.7 The Recipe Pop-up](#827-the-recipe-pop-up)
       - [8.2.8 The Language Dropdown](#828-the-language-dropdown)
@@ -187,11 +187,11 @@ The styles menu is used to customize the appearance of the elements in the appli
 
 #### 7.2.1 Workflow Menu
 
-##### A. What is it?
+##### 7.2.1.A. What is it?
 
 The workflow menu is used to create the logic of the application. It allows you to define what happens when a user interacts with an element (e.g., clicking a button, entering text in an input field, etc.). <br>
 
-##### B. The Logic of the Application
+##### 7.2.1.B. The Logic of the Application
 
 1. The Navbar
 
@@ -378,7 +378,7 @@ graph TD
 
 #### 8.2.2 The Home Page
 
-##### A. The Best Sellers
+##### 8.2.2.A. The Best Sellers
 
 As explained above, on the home page, the user can see the best sellers for cheeses, wines, and recipes. To allow the user to click on one of the buttons and go to the associated page, a workflow is triggered at this precise moment.
 
@@ -397,7 +397,7 @@ graph TD
     H --> I
 ```
 
-##### B. Repeating Group
+##### 8.2.2.B. Repeating Group
 
 Additionally, from the developer's point of view, it will be decided to use the **Repeating Group** element to display best sellers. This element allows Bubble to display a list of items in a row without having to configure each display one by one. The data source for the repeating group will be the database containing cheeses, wines (with the attribute *yes* to "best sellers"), and the recipe database. <br>
 
@@ -420,11 +420,11 @@ graph TD
 
 #### 8.2.4 The Catalog Page
 
-##### A. The SearchBox
+##### 8.2.4.A. The SearchBox
 
 To find a product in the catalog, the user enters its name in the search bar. To do this, from a developer's point of view, we will use the **SearchBox** element. What differentiates it from traditional input is that it functions as a search engine rather than just a simple input form. Indeed, when you start typing a word in the search bar, a dropdown menu appears just below where you type. This dropdown menu contains the list of products matching the entered word and the user can click on one of these products to display it in the Catalog and click on it to obtain its information. <br>
 
-##### B. Filtering Products
+##### 8.2.4.B. Filtering Products
 
 On the catalog page, the user can filter products by category and sub-category. To do this, we will use the **Dropdown** element and search for all categories (and sub-categories) saved in the database, then list them in the dropdown.
 
@@ -446,15 +446,15 @@ graph TD
 
 #### 8.2.5 The Localization Page
 
-##### A. The SearchBox
+##### 8.2.5.A. The SearchBox
 
 To find a product in the supermarket, the user can enter its name in the search bar. To do this, from a developer's perspective, we will use the **SearchBox** element. The tool being the same as before in the Catalog Page, we will skip the explanations. However, the drop-down menu of this page is quite different from the previous one. It contains the list of products matching the entered word and the user can click on one of these products to display its information as well as its **location**. <br>
 
-##### B. The Map
+##### 8.2.5.B. The Map
 
 Regarding the map, all information related to the location of products in the supermarket is stored in the database. Once the user clicks on a product in the drop-down menu, the application displays the map with its location in the supermarket. <br>
 
-##### C. The Workflow for the Localization Page
+##### 8.2.5.C. The Workflow for the Localization Page
 
 ```mermaid
 graph TD
