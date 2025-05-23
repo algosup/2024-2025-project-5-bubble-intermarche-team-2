@@ -193,28 +193,31 @@ The workflow menu is used to create the logic of the application. It allows you 
 
 ##### 7.2.1.B. The Logic of the Application
 
-1. The Navbar
+1. The Sidebar
 
-<u>1.1. Explanation of the Navbar</u>
+<u>1.1. Explanation of the Sidebar</u>
 
-- When the user clicks on the "Home" button in the Navbar, the app will navigate to the home page.
+- When the user clicks on the "Home" button in the Sidebar, the app will navigate to the home page.
 
-- When the user clicks on the "QR Code" button in the Navbar, the app will navigate to the QR Code reader page
+- When the user clicks on the "QR Code" button in the Sidebar, the app will navigate to the QR Code reader page
 
-- When the user clicks on the "Catalog" button in the Navbar, the app will navigate to the catalog page.
+- When the user clicks on the "Catalog" button in the Sidebar, the app will navigate to the catalog page.
 
-- When the user clicks on the "Localization" button in the Navbar, the app will navigate to the localization page.
+- When the user clicks on the "Localization" button in the Sidebar, the app will navigate to the localization page.
 
-<u>1.2. Workflow of the Navbar</u>
+<u>1.2. Workflow of the Sidebar</u>
 
 
 ```mermaid
 graph TD
-    A(Start) --> B{Does the user click on the Home button?}
-    B -->|Yes| C[Go to the home page]
+    A(Start) --> B{Does the user click on the Sidebar button?}
+    B -->|Yes| C{Does the user click on the Home button?}
     B -->|No| D[Do nothing]
-    C --> E(End)
-    D --> E
+    C -->|Yes| E[Go to Home Page]
+    C -->|No| F[Stay on the Sidebar but don't change pages]
+    E --> G(End)
+    F --> G
+    D --> G
 ```
 
 <br><br>
