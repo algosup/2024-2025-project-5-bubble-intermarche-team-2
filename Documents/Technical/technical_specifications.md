@@ -195,17 +195,17 @@ The workflow menu is used to create the logic of the application. It allows you 
 
 1. The Navbar
 
-    <u>1.1. Explanation of the Navbar</u>
+<u>1.1. Explanation of the Navbar</u>
 
-     - When the user clicks on the "Home" button in the Navbar, the app will navigate to the home page.
+- When the user clicks on the "Home" button in the Navbar, the app will navigate to the home page.
 
-     - When the user clicks on the "QR Code" button in the Navbar, the app will navigate to the QR Code reader page
+- When the user clicks on the "QR Code" button in the Navbar, the app will navigate to the QR Code reader page
 
-     - When the user clicks on the "Catalog" button in the Navbar, the app will navigate to the catalog page.
+- When the user clicks on the "Catalog" button in the Navbar, the app will navigate to the catalog page.
 
-     - When the user clicks on the "Localization" button in the Navbar, the app will navigate to the localization page.
+- When the user clicks on the "Localization" button in the Navbar, the app will navigate to the localization page.
 
-    <u>1.2. Workflow of the Navbar</u>
+<u>1.2. Workflow of the Navbar</u>
 
 
 ```mermaid
@@ -246,12 +246,12 @@ graph TD
 
 3. The Matching System
 
-    <u>3.1. Matching for a Product</u>
+<u>3.1. Matching for a Product</u>
 
-      - When a cheese is selected by the user, 4 recipes and 4 wines will be recommended based on a matching rank (from 1 to 5).
-      - Also, when a wine is selected by the user, 4 recipes and 4 cheeses will be recommended based on the same matching rank.
+- When a cheese is selected by the user, 4 recipes and 4 wines will be recommended based on a matching rank (from 1 to 5).
+- Also, when a wine is selected by the user, 4 recipes and 4 cheeses will be recommended based on the same matching rank.
 
-      Here is the workflow for the wine matching:
+Here is the workflow for the wine matching:
 
 <br>
 
@@ -271,11 +271,11 @@ graph TD
 
 <br>
 
-  <u>3.2. Matching for a Recipe</u>
+<u>3.2. Matching for a Recipe</u>
     
-  When a recipe is selected by the user, 4 cheeses and 4 wines will be recommended always based on this matching rank but for this one, the workflow is a bit different.
+When a recipe is selected by the user, 4 cheeses and 4 wines will be recommended always based on this matching rank but for this one, the workflow is a bit different.
 
-  Here is the workflow for the recipe:
+Here is the workflow for the recipe:
 
 ```mermaid
 graph TD
