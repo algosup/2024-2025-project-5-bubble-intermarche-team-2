@@ -141,7 +141,7 @@ To ensure the coordination of the document, names, and so on, conventions are se
 
 ## 5. Requirements
 
-Before going further, it is highly recommended to read the [Functional Specification](../Functional/functional_specification.md) document. It contains all the necessary information about the requirements and can also help in understanding the rest of this document. <br>
+Before going further, it is highly recommended to read the [Functional Specifications](../Functional/functional_specifications.md) document. It contains all the necessary information about the requirements and can also help in understanding the rest of this document. <br>
 
 ## 6. Architecture
 
