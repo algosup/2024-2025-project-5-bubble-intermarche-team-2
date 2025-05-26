@@ -236,7 +236,7 @@ graph TD
     B -->|No| D[Do nothing]
     C --> E(End)
     D --> E
-    classDef default font-size:10px;
+    classDef default font-size:7px;
 ```
 <br>
 In the same way, the pop-up is closable. To do that, the user has to click on the "Close" button.
@@ -266,14 +266,14 @@ Here is the workflow[^2] for the wine matching:
 ```mermaid
 graph TD
     A(Start) --> B{Does the wine go well with the cheese based on the scale rate?}
-    B -->|Yes because rated between 3 and 5| C{Is the wine local?}
-    B -->|No because under 3| D[Don't display the wine]
+    B -->|Yes, between 3 and 5| C{Is the wine local?}
+    B -->|No, under 3| D[Don't display the wine]
     C --> |Yes| E[Recommend above all wines of the same rating]
     C --> |No| F[Recommend after the featured wines]
     E --> G(End)
     F --> G
     D --> G
-    classDef default font-size:10px;
+    classDef default font-size:7px;
 ```
 
 *Note that the same workflow[^2] will be used for the cheese. To see it, just replace the word "wine" by "cheese".*
@@ -296,7 +296,7 @@ graph TD
     E --> G(End)
     F --> G
     D --> G
-    classDef default font-size:10px;
+    classDef default font-size:6px;
 ```
 
 *Note that there will be 2 separate recommendation sections in the Recipe Pop-up: one for wine and one for cheese*
@@ -406,7 +406,7 @@ graph TD
     E --> I
     G --> I
     H --> I
-    classDef default font-size:10px;
+    classDef default font-size:7px;
 ```
 
 ##### 8.2.2.B. Repeating Group
@@ -428,7 +428,7 @@ graph TD
     F --> H(End)
     D --> H
     G --> H
-    classDef default font-size:10px;
+    classDef default font-size:9px;
 ```
 
 #### 8.2.4 The Catalog Page
@@ -455,7 +455,7 @@ graph TD
     H --> J
     E -->|No| I[Do nothing]
     I --> J
-    classDef default font-size:10px;
+    classDef default font-size:5px;
 ```
 
 #### 8.2.5 The Localization Page
@@ -481,7 +481,7 @@ graph TD
     F --> H(End)
     D --> H
     G --> H
-    classDef default font-size:10px;
+    classDef default font-size:5px;
 ```
 
 #### 8.2.6 The Product Pop-up
@@ -511,7 +511,7 @@ graph TD
     F --> H(End)
     D --> H
     G --> H
-    classDef default font-size:10px;
+    classDef default font-size:8px;
 ```
 
 ## 9. Glossary
