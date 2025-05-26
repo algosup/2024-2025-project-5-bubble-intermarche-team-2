@@ -62,7 +62,10 @@
       - [8.2.6 The Product Pop-up](#826-the-product-pop-up)
       - [8.2.7 The Recipe Pop-up](#827-the-recipe-pop-up)
       - [8.2.8 The Language Dropdown](#828-the-language-dropdown)
-  - [9. Glossary](#9-glossary)
+  - [9. Performances and Responsiveness](#9-performances-and-responsiveness)
+    - [9.1 Performances](#91-performances)
+    - [9.2 Responsiveness](#92-responsiveness)
+  - [10. Glossary](#10-glossary)
 
 </details>
 
@@ -514,7 +517,22 @@ graph TD
     classDef default font-size:8px;
 ```
 
-## 9. Glossary
+## 9. Performances and Responsiveness
+
+For a good user experience, the application needs to be performant and responsive. To do that, here is how we will proceed:
+
+### 9.1 Performances
+
+In Bubble[^1], the performance of the application is mainly based on the number of elements on a page and the number of workflows[^2] executed, and their length. Therefore, we will simplify them as much as possible by prioritizing effective actions and eliminating possible unnecessary loops. <br>
+Also, the database is a thing that can be optimized. To ensure that, we will organize the data and avoid saving them twice in the same table and, as much as possible, in the whole database. <br>
+Finally, thanks to the issue tab on Bubble[^1], we will be able to track bugs (and other kind of issues) in the application more easily and thus optimize it.
+
+### 9.2 Responsiveness
+
+The application will be designed to be responsive, meaning that it will adapt to different screen sizes and devices. Bubble[^1] provides a responsive editor that allows developers to define how elements should behave on different screen sizes. <br>
+Because we believe users won't be using their computers to access the app at the supermarket, we'll focus on the mobile version of the app for development. However, since we want to have a responsive app (to avoid user dissatisfaction and frustration), it will still be pleasant to use on both computers and tablets.
+
+## 10. Glossary
 
 [^1]: Bubble:
 A no-code platform that allows users to create web applications without writing code. It provides a visual interface to design and develop applications using drag-and-drop elements, workflows, and a database.
