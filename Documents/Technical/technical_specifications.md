@@ -481,7 +481,7 @@ graph TD
     F --> H(End)
     D --> H
     G --> H
-    classDef default font-size:5px;
+    classDef default font-size:4.9px;
 ```
 
 #### 8.2.6 The Product Pop-up
