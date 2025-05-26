@@ -30,7 +30,7 @@ The team remained focused despite some technical challenges and the absence of a
    - Mathis was absent during part of the week, which affected coordination and development progress.
 2. **Technical Issues**
    - Difficulties encountered when displaying images retrieved from the database.
-   - Problems with the barcode scanner integration.
+   - Problems with the scanbar integration.
 
 ## Plan for Next Week
 
