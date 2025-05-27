@@ -246,7 +246,7 @@ In the same way, the pop-up is closable. To do that, the user has to click on th
 graph TD
     A(Start) --> B{Does the user click on the Close button?}
     B -->|Yes| C[Close the Pop-up]
-    B -->|No| D[Let the Pop-up open]
+    B -->|No| D[Leave the pop-up open]
     C --> E(End)
     D --> E
     classDef default font-size:10px;
@@ -286,9 +286,9 @@ Here is the workflow for the recipe:
 
 ```mermaid
 graph TD
-    A(Start) --> B{Is wine and cheese rating > 3?}
+    A(Start) --> B{Are wine and cheese rating > 3?}
     B -->|No| C[Do not display the wine and cheese]
-    B -->|Yes| D{Is the wine and cheese local?}
+    B -->|Yes| D{Are the wine and cheese local?}
     D -->|Yes| E[Display firstly in their section]
     D -->|No| F[Display after the Local ones]
     E --> G(End)
@@ -313,7 +313,7 @@ Here is an example of a table that will be used in the application:
   - Wine: The list of Wine Products that are stored in the database
   - Cheese: The list of Cheese Products that are stored in the database
   - Recipe: The list of Recipes that are stored in the database
-  - Match Score: The score of the match between the cheese and the wine based on the external API and the expert site
+  - Match Score: The score of the match between cheese and wine based on expert sites and knowledge
 
 
 ## 8. Website Functionalities
@@ -359,7 +359,7 @@ On the product pop-up, the user will see the description of the product (wine or
 
 #### 8.1.7 The Recipe Pop-up
 
-The recipe pop-up allows you to see a list of wines and cheeses that pair well with the dish and its description. To access it, the user must click on the desired recipe.
+The recipe pop-up allows the user to see a list of wines and cheeses that pair well with the dish and its description. To access it, the user must click on the desired recipe.
 
 #### 8.1.8 The Language Dropdown
 
@@ -484,13 +484,13 @@ graph TD
 
 When the user clicks on a product on the home page, the app will display a pop-up with information about the product (wine or cheese) as well as the list of recipes that go well with it.
 
-About the workflow, it is indicated in the [**The pop-ups apparition** section](#b-the-logic-of-the-application).
+About the workflow, it is indicated in the [**Pop-ups apparition** section](#b-the-logic-of-the-application).
 
 #### 8.2.7 The Recipe Pop-up
 
 On the home page or in the Product Pop-up, it is possible to click on a specific recipe. When it's done, the app will display a pop-up with the list of wines and cheeses that go well with the recipe as well as its description and name (according to the database).
 
-As for the product pop-up, the workflow is the same as the one in [**The pop-ups apparition** section](#721-workflow-menu).
+As for the product pop-up, the workflow is the same as the one in the [**Pop-ups apparition** section](#721-workflow-menu).
 
 #### 8.2.8 The Language Dropdown
 
@@ -516,7 +516,7 @@ For a good user experience, the application needs to be performant and responsiv
 
 ### 9.1 Performances
 
-In Bubble, the performance of the application is mainly based on the number of elements on a page and the number of workflows[^2] executed, and their length. Therefore, we will simplify them as much as possible by prioritizing effective actions and eliminating possible unnecessary loops.
+In Bubble, the performance of the application is mainly based on the number of elements on a page and the number of workflows executed, and their length. Therefore, we will simplify them as much as possible by prioritizing effective actions and eliminating possible unnecessary loops.
 
 Also, the database is a thing that can be optimized. To ensure that, we will organize the data and avoid saving them twice in the same table and, as much as possible, in the whole database.
 
