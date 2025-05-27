@@ -2,16 +2,6 @@
 
 # Technical Specification
 
----
-
-**Project Name**: Bubble Intermarché <br>
-**Team**: Team 2 <br>
-**Created by**: Enoal ADAM <br>
-**Creation Date**: 04/29/2025 <br>
-**Updated**: 05/26/2025 <br>
-
----
-
 </div>
 
 <details>
@@ -76,7 +66,7 @@ The project goal is to develop a web application using Bubble[^1] for the Interm
 ## 2. Objectives
 
 - **It must be a mobile app**, ensuring offline access, geolocation, and preferences registration.
-- **The app should open swiftly** so they can access functionalities directly instead of taking time to log in/sign up and buying what they want.
+- **The app should open swiftly** so the user can access functionalities directly instead of taking time to log in/sign up and buying what they want.
 - **The app must be user-friendly** to make sure the user doesn't get lost in the app.
 - **Multiple languages must be implemented** for a wider public due to the touristic flux of the region.
 
@@ -88,16 +78,17 @@ The project goal is to develop a web application using Bubble[^1] for the Interm
 │   ├── workflows # GitHub Actions folder -> Contain the scripts that will automatically run
 │   │   └── main.yml # GitHub Actions script to merge the main branch into the sub-branches
 │   │
+│   ├── PULL_REQUEST_TEMPLATE.md # Contains GitHub pull request template
 │   └── ISSUE_TEMPLATE # GitHub issue template folder -> Contains the templates for the issues
 │
 ├── Documents # Stores all the documents related to the project
 │   ├── Functional
 │   │  ├── Images
-│   │  └── functional_specification.md
+│   │  └── functional_specifications.md
 │   │
 │   ├── Technical
 │   │  ├── Images
-│   │  └── technical_specification.md
+│   │  └── technical_specifications.md
 │   │
 │   ├── Quality_Assurance
 │   │  ├── Images
@@ -136,15 +127,15 @@ To ensure the coordination of the document, names, and so on, conventions are se
 | API Calls         | `GoodNameOfAPI`       | PascalCase        |
 
 > [!caution] 
-> **Elements Naming Conventions:** <br>
-> To avoid all misunderstandings regarding an element in Bubble, the name of the element must be in **Title Case** preceded by its type (except for groups). <br>
+> **Elements Naming Conventions:**
+> 
+> To avoid all misunderstandings regarding an element in Bubble, the name of the element must be in **Title Case** preceded by its type (except for groups).
+> 
 > For example, if the element is an *Input*, its name should be "Input Zip Code".
-
-<br>
 
 ## 5. Requirements
 
-Before going further, it is highly recommended to read the [Functional Specifications](../Functional/functional_specifications.md) document. It contains all the necessary information about the requirements and can also help in understanding the rest of this document. <br>
+Before going further, it is highly recommended to read the [Functional Specifications](../Functional/functional_specifications.md) document. It contains all the necessary information about the requirements and can also help in understanding the rest of this document.
 
 ## 6. Architecture
 
@@ -156,35 +147,38 @@ The following technologies are used in this project:
 - **Bubble Plugin**: Additional plugins to enhance the application (e.g., API Connector, Barcode Scanner, etc.).
 - **Bubble Database**: Database to store the data of the application.
 
-All these technologies are used directly on the Bubble[^1] platform. Therefore, there is no need to install anything more in the application. <br>
+All these technologies are used directly on the Bubble platform. Therefore, there is no need to install anything more in the application.
 
 ### 6.2 How will it work?
 
-We will have two sides on our application, a front-end side (the visible part of the application) and a back-end side (the database + all the workflows). <br>
-- As an **input** of the application, we will have the user who will interact with the application. The user will be able to enter data (e.g., scan a barcode, search for a *cheese or wine* product, etc.) and the application will process these data to provide the desired output. <br>
-- The **output** of the application will be the data displayed to the user (e.g., recipes, products, etc.) and the actions performed by the application (e.g., store data in the database, execute workflow[^2], etc.). <br>
+We will have two sides on our application, a front-end side (the visible part of the application) and a back-end side (the database + all the workflows).
+- As an **input** of the application, we will have the user who will interact with the application. The user will be able to enter data (e.g., scan a barcode, search for a *cheese or wine* product, etc.) and the application will process these data to provide the desired output.
+- The **output** of the application will be the data displayed to the user (e.g., recipes, products, etc.) and the actions performed by the application (e.g., store data in the database, execute workflow[^2], etc.).
 
 ## 7. Bubble Platform
 
-Bubble[^1] is a no-code platform that allows the creation of web applications without any programming knowledge. To create an application, we place blocks, more precisely called **elements**, on a page and define their properties to create a rendering similar to an HTML[^3] page. <br>
+Bubble is a no-code platform that allows the creation of web applications without any programming knowledge. To create an application, we place blocks, more precisely called **elements**, on a page and define their properties to create a rendering similar to an HTML[^3] page.
 
 ### 7.1 Front-end
 
 #### 7.1.1 Pages
 
-If you want to create an application with multiple sections/pages, you must create them in the **Pages** menu. The particularity of Bubble[^1] is that you need to create a page like an HTML[^3] page for each new interface even if the application has only one but with multiple menus. <br>
+If you want to create an application with multiple sections/pages, you must create them in the **Pages** menu. The particularity of Bubble is that you need to create a page like an HTML page for each new interface even if the application has only one but with multiple menus.
+
 
 ![Pages Menu](/Documents/Technical/Images/pages_menu.jpeg)
 
 #### 7.1.2 Drag & Drop Menu
 
-To add an element (as we see at the top of the section), you can drag and drop it from the bar on the left side, as shown in the image. They act like flex containers[^4] in HTML[^3][^4], allowing you to group elements but also, put them in a Row, Column with a Space Between each element in the container, and so on. <br>
+To add an element (as we see at the top of the section), you can drag and drop it from the bar on the left side, as shown in the image. They act like flex containers[^4] in HTML, allowing you to group elements but also, put them in a Row, Column with a Space Between each element in the container, and so on.
+
 
 ![Drag & Drop Menu](/Documents/Technical/Images/drag_&_drop_menu.jpeg)
 
 #### 7.1.3 Styles Menu
 
-The styles menu is used to customize the appearance of the elements in the application. You can change the font, color, size, and other properties of the elements. Changes made here apply to all elements of the same type (like a CSS tag[^5] in a style sheet). <br>
+The styles menu is used to customize the appearance of the elements in the application. You can change the font, color, size, and other properties of the elements. Changes made here apply to all elements of the same type (like a CSS tag[^5] in a style sheet).
+
 
 ![Styles Menu](/Documents/Technical/Images/styles_menu.jpeg)
 
@@ -194,7 +188,7 @@ The styles menu is used to customize the appearance of the elements in the appli
 
 ##### 7.2.1.A. What is it?
 
-The workflow[^2] menu is used to create the logic of the application. It allows you to define what happens when a user interacts with an element (e.g., clicking a button, entering text in an input field, etc.). <br>
+The workflow menu is used to create the logic of the application. It allows you to define what happens when a user interacts with an element (e.g., clicking a button, entering text in an input field, etc.).
 
 ##### 7.2.1.B. The Logic of the Application
 
@@ -216,17 +210,21 @@ The workflow[^2] menu is used to create the logic of the application. It allows 
 ```mermaid
 graph TD
     A(Start) --> B{Does the user click on the Sidebar button?}
-    B -->|Yes| C{Does the user click on the Home button?}
-    B -->|No| D[Do nothing]
-    C -->|Yes| E[Go to Home Page]
-    C -->|No| F[Stay on the Sidebar but don't change pages]
-    E --> G(End)
-    F --> G
-    D --> G
+    B -->|No| C[Do nothing]
+    B -->|Yes| D{Which button is clicked?}
+    D -->|Home| E[Go to Home Page]
+    D -->|QR Code| F[Go to QR Code Reader Page]
+    D -->|Catalog| G[Go to Catalog Page]
+    D -->|Localization| H[Go to Localization Page]
+    E --> I(End)
+    F --> I
+    G --> I
+    H --> I
+    C --> I
     classDef default font-size:10px;
 ```
 
-<br><br>
+<br>
 
 2. The pop-ups
 
@@ -253,7 +251,8 @@ graph TD
     D --> E
     classDef default font-size:10px;
 ```
-<br><br>
+
+<br>
 
 3. The Matching System
 
@@ -262,53 +261,47 @@ graph TD
 - When a cheese is selected by the user, 4 recipes and 4 wines will be recommended based on a matching rank (from 1 to 5).
 - Also, when a wine is selected by the user, 4 recipes and 4 cheeses will be recommended based on the same matching rank.
 
-Here is the workflow[^2] for the wine matching:
-
-<br>
+Here is the workflow for the wine matching:
 
 ```mermaid
 graph TD
-    A(Start) --> B{Does the wine go well with the cheese based on the scale rate?}
-    B -->|Yes, between 3 and 5| C{Is the wine local?}
-    B -->|No, under 3| D[Don't display the wine]
-    C --> |Yes| E[Recommend above all wines of the same rating]
-    C --> |No| F[Recommend after the featured wines]
+    A(Start) --> B{Is wine rating > 3?}
+    B -->|No| C[Do not display the wine]
+    B -->|Yes| D{Is the wine local?}
+    D -->|Yes| E[Display firstly in the Wines Section]
+    D -->|No| F[Display after Local Wines]
     E --> G(End)
     F --> G
-    D --> G
-    classDef default font-size:7px;
+    C --> G
+    classDef default font-size:12.8px
 ```
 
-*Note that the same workflow[^2] will be used for the cheese. To see it, just replace the word "wine" by "cheese".*
-
-<br>
+*Note that the same workflow will be used for the cheese. To see it, just replace the word "wine" by "cheese".*
 
 <u>3.2. Matching for a Recipe</u>
     
-When a recipe is selected by the user, 4 cheeses and 4 wines will be recommended always based on this matching rank but for this one, the workflow[^2] is a bit different.
+When a recipe is selected by the user, 4 cheeses and 4 wines will be recommended always based on this matching rank but for this one, the workflow is a bit different.
 
-Here is the workflow[^2] for the recipe:
+Here is the workflow for the recipe:
 
 ```mermaid
 graph TD
-    A(Start) --> B{Does the recipe go well with the cheese and the wine based on the scale rate?}
-    B -->|Yes because rated between 3 and 5| C{Is the cheese and the wine local?}
-    B -->|No because under 3| D[Don't display the cheeses and wines]
-    C --> |Yes| E[Recommend above all cheeses and wines of the same rating]
-    C --> |No| F[Recommend after the featured cheeses and wines]
+    A(Start) --> B{Is wine and cheese rating > 3?}
+    B -->|No| C[Do not display the wine and cheese]
+    B -->|Yes| D{Is the wine and cheese local?}
+    D -->|Yes| E[Display firstly in their section]
+    D -->|No| F[Display after the Local ones]
     E --> G(End)
     F --> G
-    D --> G
-    classDef default font-size:6px;
+    C --> G
+    classDef default font-size:12.5px
 ```
 
 *Note that there will be 2 separate recommendation sections in the Recipe Pop-up: one for wine and one for cheese*
 
-<br>
-
 #### 7.2.2 The Database
 
-The database is used to store all the data of the application. It is divided into different tables, each containing different fields. <br>
+The database is used to store all the data of the application. It is divided into different tables, each containing different fields.
 
 Here is an example of a table that will be used in the application:
 
@@ -342,35 +335,35 @@ Each following section will talk about one of these pages.
 
 #### 8.1.1 The Launch Page
 
-The launch page is the first page that the user will see when he opens the application. It will contain the logo of the app and to access the home page, you need to click anywhere on the screen. <br>
+The launch page is the first page that the user will see when he opens the application. It will contain the logo of the app and to access the home page, you need to click anywhere on the screen.
 
 #### 8.1.2 The Home Page
 
-The home page is the main page of the application. In it, the user will retrieve the Best Sellers for Cheeses, Wines, and recommendations of Recipes that go well with the best sellers. If the user presses one of the buttons in the form of the list above, the product/recipe pop-up will be displayed, allowing him to see the description as well as have a better view of it. <br>
+The home page is the main page of the application. In it, the user will retrieve the Best Sellers for Cheeses, Wines, and recommendations of Recipes that go well with the best sellers. If the user presses one of the buttons in the form of the list above, the product/recipe pop-up will be displayed, allowing him to see the description as well as have a better view of it.
 
 #### 8.1.3 The Barcode Scanning Page
 
-This page is used by the client to scan the barcode of a product. The app will then display the scanned product's information below. This possibility to scan the barcode is made possible thanks to a plugin in Bubble[^1]. <br>
+This page is used by the user to scan the barcode of a product. The app will then display the scanned product's information below. This possibility to scan the barcode is made possible thanks to a plugin in Bubble.
 
 #### 8.1.4 The Catalog Page
 
-The catalog is used to display all the products available in the application. The user can filter the products by category (cheese, wine) and sub-categories (e.g., White Wine, Cow's Cheese, etc.) and then search for a specific product. Like in the Home Page, if the user clicks on a product, it will display the related pop-up. <br>
+The catalog is used to display all the products available in the application. The user can filter the products by category (cheese, wine) and sub-categories (e.g., White Wine, Cow's Cheese, etc.) and then search for a specific product. Like in the Home Page, if the user clicks on a product, it will display the related pop-up.
 
 #### 8.1.5 The Localization Page
 
-The localization page is used to find a product in the supermarket, more specifically to find the aisle where the product is located. It will work like the catalog. The user can search for a product by entering its name in the search bar and then clicking on the product overlay related to what is entered. <br>
+The localization page is used to find a product in the supermarket, more specifically to find the aisle where the product is located. It will work like the catalog. The user can search for a product by entering its name in the search bar and then clicking on the product overlay related to what is entered.
 
 #### 8.1.6 The Product Pop-up
 
-On the product pop-up, the user will see the description of the product (wine or cheese) as well as the list of recipes that go well with it. The user can then click on one of the recipes to see its details. <br>
+On the product pop-up, the user will see the description of the product (wine or cheese) as well as the list of recipes that go well with it. The user can then click on one of the recipes to see its details.
 
 #### 8.1.7 The Recipe Pop-up
 
-The recipe pop-up allows you to see a list of wines and cheeses that pair well with the dish and its description. To access it, the user must click on the desired recipe. <br> 
+The recipe pop-up allows you to see a list of wines and cheeses that pair well with the dish and its description. To access it, the user must click on the desired recipe.
 
 #### 8.1.8 The Language Dropdown
 
-The language dropdown is used to change the language of the application. The user can choose between all the languages that exist on Google Translate thanks to a plugin[^6]. <br>
+The language dropdown is used to change the language of the application. The user can choose between all the languages that exist on Google Translate thanks to a plugin[^6].
 
 ### 8.2 Functionalities
 
@@ -378,7 +371,7 @@ Now that we have seen the pages of the application, let's see the functionalitie
 
 #### 8.2.1 The Launch Page
 
-When the user is on the launch page, a workflow[^2] is triggered to redirect the user to the language page when he clicks anywhere on his screen.
+When the user is on the launch page, a workflow is triggered to redirect the user to the language page when he clicks anywhere on his screen.
 
 ```mermaid
 graph TD
@@ -387,14 +380,14 @@ graph TD
     B -->|No| D[Do nothing]
     C --> E(End)
     D --> E
-    classDef default font-size:10px;
+    classDef default font-size:13px;
 ```
 
 #### 8.2.2 The Home Page
 
 ##### 8.2.2.A. The Best Sellers
 
-As explained above, on the home page, the user can see the best sellers for cheeses, wines, and recipes. To allow the user to click on one of the buttons and go to the associated page, a workflow[^2] is triggered at this precise moment.
+As explained above, on the home page, the user can see the best sellers for cheeses, wines, and recipes. To allow the user to click on one of the buttons and go to the associated page, a workflow is triggered at this precise moment.
 
 ```mermaid
 graph TD
@@ -409,16 +402,16 @@ graph TD
     E --> I
     G --> I
     H --> I
-    classDef default font-size:7px;
+    classDef default font-size:7.6px;
 ```
 
 ##### 8.2.2.B. Repeating Group
 
-Additionally, from the developer's point of view, it will be decided to use the **Repeating Group** element to display best sellers. This element allows Bubble[^1] to display a list of items in a row without having to configure each display one by one. The data source for the repeating group will be the database containing cheeses, wines (with the attribute *yes* to "best sellers"), and the recipe database. <br>
+Additionally, from the developer's point of view, it will be decided to use the **Repeating Group** element to display best sellers. This element allows Bubble to display a list of items in a row without having to configure each display one by one. The data source for the repeating group will be the database containing cheeses, wines (with the attribute *yes* to "best sellers"), and the recipe database.
 
 #### 8.2.3 The Barcode Scanning Page
 
-When the user clicks on the related icon on the navigation bar, the app will redirect him to the barcode scanning page. Once on it, the plugin[^6] "Barcode Scanner" will be started after clicking on a button to launch it. After the scan, the plugin[^6] will return the EAN code of the product (in the background) and match it to the database. If the product is in the database, the app will display the information of the scanned product just below. <br>
+When the user clicks on the related icon on the navigation bar, the app will redirect him to the barcode scanning page. Once on it, the plugin "Barcode Scanner" will be started after clicking on a button to launch it. After the scan, the plugin will return the EAN code of the product (in the background) and match it to the database. If the product is in the database, the app will display the information of the scanned product just below.
 
 ```mermaid
 graph TD
@@ -431,14 +424,14 @@ graph TD
     F --> H(End)
     D --> H
     G --> H
-    classDef default font-size:9px;
+    classDef default font-size:9.4px;
 ```
 
 #### 8.2.4 The Catalog Page
 
 ##### 8.2.4.A. The SearchBox
 
-To find a product in the catalog, the user enters its name in the search bar. To do this, from a developer's point of view, we will use the **SearchBox** element. What differentiates it from traditional input is that it functions as a search engine rather than just a simple input form. Indeed, when you start typing a word in the search bar, a dropdown menu appears just below where you type. This dropdown menu contains the list of products matching the entered word and the user can click on one of these products to display it in the Catalog and click on it to obtain its information. <br>
+To find a product in the catalog, the user enters its name in the search bar. To do this, from a developer's point of view, we will use the **SearchBox** element. What differentiates it from traditional input is that it functions as a search engine rather than just a simple input form. Indeed, when you start typing a word in the search bar, a dropdown menu appears just below where you type. This dropdown menu contains the list of products matching the entered word and the user can click on one of these products to display it in the Catalog and click on it to obtain its information.
 
 ##### 8.2.4.B. Filtering Products
 
@@ -452,24 +445,24 @@ graph TD
     C --> E{Does the user select a sub-category?}
     D --> E
     E -->|Yes| F{Did the user also select a category?}
-    F -->|Yes| G[Display the list of products that correspond to the selected category and sub-category]
+    F -->|Yes| G[Display the list of products that correspond to the selected category & sub-category]
     G --> J(End)
     F -->|No| H[Display the list of products that correspond to the selected sub-category]
     H --> J
     E -->|No| I[Do nothing]
     I --> J
-    classDef default font-size:5px;
+    classDef default font-size:5.2px;
 ```
 
 #### 8.2.5 The Localization Page
 
 ##### 8.2.5.A. The SearchBox
 
-To find a product in the supermarket, the user can enter its name in the search bar. To do this, from a developer's perspective, we will use the **SearchBox** element. The tool being the same as before in the Catalog Page, we will skip the explanations. However, the dropdown menu of this page is quite different from the previous one. It contains the list of products matching the entered word and the user can click on one of these products to display its information as well as its **location**. <br>
+To find a product in the supermarket, the user can enter its name in the search bar. To do this, from a developer's perspective, we will use the **SearchBox** element. The tool being the same as before in the Catalog Page, we will skip the explanations. However, the dropdown menu of this page is quite different from the previous one. It contains the list of products matching the entered word and the user can click on one of these products to display its information as well as its **location**.
 
 ##### 8.2.5.B. The Map
 
-Regarding the map, all information related to the location of products in the supermarket is stored in the database. Once the user clicks on a product in the dropdown menu, the application displays the map with its location in the supermarket. <br>
+Regarding the map, all information related to the location of products in the supermarket is stored in the database. Once the user clicks on a product in the dropdown menu, the application displays the map with its location in the supermarket.
 
 ##### 8.2.5.C. The Workflow for the Localization Page
 
@@ -489,19 +482,19 @@ graph TD
 
 #### 8.2.6 The Product Pop-up
 
-When the user clicks on a product on the home page, the app will display a pop-up with information about the product (wine or cheese) as well as the list of recipes that go well with it. <br>
+When the user clicks on a product on the home page, the app will display a pop-up with information about the product (wine or cheese) as well as the list of recipes that go well with it.
 
-About the workflow[^2], it is indicated in the [**The pop-ups apparition** section](#b-the-logic-of-the-application). <br>
+About the workflow, it is indicated in the [**The pop-ups apparition** section](#b-the-logic-of-the-application).
 
 #### 8.2.7 The Recipe Pop-up
 
-On the home page or in the Product Pop-up, it is possible to click on a specific recipe. When it's done, the app will display a pop-up with the list of wines and cheeses that go well with the recipe as well as its description and name (according to the database). <br>
+On the home page or in the Product Pop-up, it is possible to click on a specific recipe. When it's done, the app will display a pop-up with the list of wines and cheeses that go well with the recipe as well as its description and name (according to the database).
 
-As for the product pop-up, the workflow[^2] is the same as the one in [**The pop-ups apparition** section](#721-workflow-menu). <br>
+As for the product pop-up, the workflow is the same as the one in [**The pop-ups apparition** section](#721-workflow-menu).
 
 #### 8.2.8 The Language Dropdown
 
-This dropdown will be available on all pages of the application. For this, we will use the **Language Translation** plugin[^6]. When the user clicks on the dropdown, a list of languages will appear. The user can then select the desired language and the application will be automatically translated into that language. To do that, the plugin[^6] will call a JS[^7] script that integrates a translate widget which is part of the GTranslate[^8] service. <br>
+This dropdown will be available on all pages of the application. For this, we will use the **Language Translation** plugin. When the user clicks on the dropdown, a list of languages will appear. The user can then select the desired language and the application will be automatically translated into that language. To do that, the plugin will call a JS[^7] script that integrates a translate widget which is part of the GTranslate[^8] service.
 
 ```mermaid
 graph TD
@@ -514,7 +507,7 @@ graph TD
     F --> H(End)
     D --> H
     G --> H
-    classDef default font-size:8px;
+    classDef default font-size:8.5px;
 ```
 
 ## 9. Performances and Responsiveness
@@ -523,13 +516,16 @@ For a good user experience, the application needs to be performant and responsiv
 
 ### 9.1 Performances
 
-In Bubble[^1], the performance of the application is mainly based on the number of elements on a page and the number of workflows[^2] executed, and their length. Therefore, we will simplify them as much as possible by prioritizing effective actions and eliminating possible unnecessary loops. <br>
-Also, the database is a thing that can be optimized. To ensure that, we will organize the data and avoid saving them twice in the same table and, as much as possible, in the whole database. <br>
-Finally, thanks to the issue tab on Bubble[^1], we will be able to track bugs (and other kind of issues) in the application more easily and thus optimize it.
+In Bubble, the performance of the application is mainly based on the number of elements on a page and the number of workflows[^2] executed, and their length. Therefore, we will simplify them as much as possible by prioritizing effective actions and eliminating possible unnecessary loops.
+
+Also, the database is a thing that can be optimized. To ensure that, we will organize the data and avoid saving them twice in the same table and, as much as possible, in the whole database.
+
+Finally, thanks to the issue tab on Bubble, we will be able to track bugs (and other kind of issues) in the application more easily and thus optimize it.
 
 ### 9.2 Responsiveness
 
-The application will be designed to be responsive, meaning that it will adapt to different screen sizes and devices. Bubble[^1] provides a responsive editor that allows developers to define how elements should behave on different screen sizes. <br>
+The application will be designed to be responsive, meaning that it will adapt to different screen sizes and devices. Bubble provides a responsive editor that allows developers to define how elements should behave on different screen sizes.
+
 Because we believe users won't be using their computers to access the app at the supermarket, we'll focus on the mobile version of the app for development. However, since we want to have a responsive app (to avoid user dissatisfaction and frustration), it will still be pleasant to use on both computers and tablets.
 
 ## 10. Glossary
