@@ -17,12 +17,12 @@ During this time, Mattéo continued adding resources to the data.
 1. **Documents**
    - Technical Specifications finished.
    - Test Plan Finished.
-   - Review of the Technical Specifications and Pull request did.
-   - Started the weekly 6, and update the wbs, actual schedule.
+   - Reviewed the Technical Specifications and submitted a pull request.
+   - Started the weekly 6 and updated the WBS and actual schedule.
 2. **Development**
-   - Add the feature of localisation of products.
+   - Add the feature of localization of products.
    - Fix some bugs.
-   - Continue to fiel the data.
+   - Continue to fill in the data.
 
 ## Challenges
 
@@ -39,11 +39,11 @@ During this time, Mattéo continued adding resources to the data.
 
 1. **Documents**
    - Pull Request of the test plan.
-   - Continue weekly reports, and update wbs and actual schedule.
-   - Continue to work the User manual.
+   - Continue weekly reports, and update WBS and actual schedule.
+   - Continue to work on the User manual.
    - Finish test cases.
 2. **Development**
-   - Continue to fiel the data.
+   - Continue to fill in the data.
    - Fix bug pop-up recipe Home.
    - Update the style Product of localization.
 
