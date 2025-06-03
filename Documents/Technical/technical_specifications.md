@@ -32,7 +32,6 @@
       - [8.1.2 The Home Page](#812-the-home-page)
       - [8.1.3 The Barcode Scanning Page](#813-the-barcode-scanning-page)
       - [8.1.4 The Catalog Page](#814-the-catalog-page)
-      - [8.1.5 The Localization Page](#815-the-localization-page)
       - [8.1.6 The Product Pop-up](#816-the-product-pop-up)
       - [8.1.7 The Recipe Pop-up](#817-the-recipe-pop-up)
       - [8.1.8 The Language Dropdown](#818-the-language-dropdown)
@@ -45,11 +44,9 @@
       - [8.2.4 The Catalog Page](#824-the-catalog-page)
         - [8.2.4.A. The SearchBox](#824a-the-searchbox)
         - [8.2.4.B. Filtering Products](#824b-filtering-products)
-      - [8.2.5 The Localization Page](#825-the-localization-page)
-        - [8.2.5.A. The SearchBox](#825a-the-searchbox)
-        - [8.2.5.B. The Map](#825b-the-map)
-        - [8.2.5.C. The Workflow for the Localization Page](#825c-the-workflow-for-the-localization-page)
       - [8.2.6 The Product Pop-up](#826-the-product-pop-up)
+        - [8.2.6.A. General Information](#826a-general-information)
+        - [8.2.6.B. The Localization](#826b-the-localization)
       - [8.2.7 The Recipe Pop-up](#827-the-recipe-pop-up)
       - [8.2.8 The Language Dropdown](#828-the-language-dropdown)
   - [9. Performances and Responsiveness](#9-performances-and-responsiveness)
@@ -326,7 +323,6 @@ The website will have 5 main pages, 2 Pop-ups and 1 Dropdown (available in all t
 - The Home Page
 - The Barcode Scanning Page
 - The Catalog Page
-- The Localization Page
 - The Product Pop-up
 - The Recipe Pop-up
 - The Language Dropdown
@@ -349,13 +345,9 @@ This page is used by the user to scan the barcode of a product. The app will the
 
 The catalog is used to display all the products available in the application. The user can filter the products by category (cheese, wine) and sub-categories (e.g., White Wine, Cow's Cheese, etc.) and then search for a specific product. Like in the Home Page, if the user clicks on a product, it will display the related pop-up.
 
-#### 8.1.5 The Localization Page
-
-The localization page is used to find a product in the supermarket, more specifically to find the aisle where the product is located. It will work like the catalog. The user can search for a product by entering its name in the search bar and then clicking on the product overlay related to what is entered.
-
 #### 8.1.6 The Product Pop-up
 
-On the product pop-up, the user will see the description of the product (wine or cheese) as well as the list of recipes that go well with it. The user can then click on one of the recipes to see its details.
+On the product pop-up, the user will see the description of the product (wine or cheese) as well as the list of recipes that go well with it and its localization. The localization is used to find a product in the supermarket, more specifically to find the aisle where the product is located. 
 
 #### 8.1.7 The Recipe Pop-up
 
@@ -454,37 +446,39 @@ graph TD
     classDef default font-size:5.2px;
 ```
 
-#### 8.2.5 The Localization Page
+#### 8.2.6 The Product Pop-up
 
-##### 8.2.5.A. The SearchBox
+##### 8.2.6.A. General Information
 
-To find a product in the supermarket, the user can enter its name in the search bar. To do this, from a developer's perspective, we will use the **SearchBox** element. The tool being the same as before in the Catalog Page, we will skip the explanations. However, the dropdown menu of this page is quite different from the previous one. It contains the list of products matching the entered word and the user can click on one of these products to display its information as well as its **location**.
+When the user clicks on a product on the home page, the app will display a pop-up with information about the product (wine or cheese) as well as the list of recipes that go well with it and its localization.
 
-##### 8.2.5.B. The Map
+About the workflow, it is indicated in the [**Pop-ups apparition** section](#b-the-logic-of-the-application).
 
-Regarding the map, all information related to the location of products in the supermarket is stored in the database. Once the user clicks on a product in the dropdown menu, the application displays the map with its location in the supermarket.
+##### 8.2.6.B. The Localization
 
-##### 8.2.5.C. The Workflow for the Localization Page
+Regarding the map, all information related to the location of products in the supermarket is stored in the database.
 
 ```mermaid
 graph TD
-    A(Start) --> B{Does the user enter a product name in the search bar?}
-    B -->|Yes| C[Display the dropdown menu with the list of products that correspond to the entered word]
-    B -->|No| D[Do nothing]
-    C --> E{Does the user click on a product in the dropdown menu?}
-    E -->|Yes| F[Display the map with the location of the product and its information]
-    E -->|No| G[Do nothing]
-    F --> H(End)
-    D --> H
-    G --> H
-    classDef default font-size:4.9px;
+    A(Start) --> B{Is the product a cheese?}
+    B -->|Yes| C[Display the localization of the cheese in the supermarket]
+    B -->|No| D{Is the product a wine?}
+    D -->|Yes| E{Is the wine red?}
+    D -->|No| F[Display the map without localization]
+    E -->|Yes| G[Display the localization of the red wine in the supermarket]
+    E -->|No| H{Is the wine white?}
+    H -->|Yes| I[Display the localization of the white wine in the supermarket]
+    H -->|No| J{Is the wine rosé?}
+    J -->|Yes| K[Display the localization of the rosé wine in the supermarket]
+    J -->|No| L[Display the map without localization]
+    C --> M(End)
+    G --> M
+    I --> M
+    K --> M
+    F --> M
+    L --> M
+    classDef default font-size:7.7px;
 ```
-
-#### 8.2.6 The Product Pop-up
-
-When the user clicks on a product on the home page, the app will display a pop-up with information about the product (wine or cheese) as well as the list of recipes that go well with it.
-
-About the workflow, it is indicated in the [**Pop-ups apparition** section](#b-the-logic-of-the-application).
 
 #### 8.2.7 The Recipe Pop-up
 
