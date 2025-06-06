@@ -1,6 +1,6 @@
 # Wine & Cheese Recommendation App 🍷❤️🧀
 
-An intuitive mobile application requested by the **Intermarché from Saint-Rémy-de-Provence**. this app helps food and wine lovers discover perfect Intermarché's wine and cheese pairings, built using the no-code platform **Bubble.io**.
+An intuitive mobile application requested by the **Intermarché from Saint-Rémy-de-Provence**. This app helps food and wine lovers discover perfect Intermarché's wine and cheese pairings, built using the no-code platform **Bubble.io**.
 
 ## Project Description 🔎
 
@@ -32,8 +32,8 @@ An intuitive mobile application requested by the **Intermarché from Saint-Rémy
 - Smart search: by wine type, cheese type, region, occasion, or mood.  
 - Dynamic recommendations: tailored to taste preferences or seasonal trends.  
 - Interactive product profiles: detailed info with images, tasting tips, and pairing suggestions.  
-- Favorites and history: store liked pairings, receive suggestions based on past activity.  
-- User accounts: profile creation, personalized suggestions, badges or levels to encourage exploration.
+- Favorites and history: store liked pairings, and receive suggestions based on past activity.  
+- User accounts: profile creation, personalized suggestions, badges, or levels to encourage exploration.
 
 
 ## How to Launch the Program 🚀
@@ -44,11 +44,11 @@ To access our app, you need to scan the QR code on this flyer using your phone.
 ![Flyer Scan](/Documents/Readme_extension/scan.png)
 *This flyer can be found
 
-Afterwards, you will be redirected onto our welcome page, press anywhere on the screen to access our application with all the current functionalities.
+Afterward, you will be redirected to our welcome page, press anywhere on the screen to access our application with all the current functionalities.
 
 ![Main Page](/Documents/Readme_extension/main_page.png)
 
-*the main page after you scanned the QR code*
+*The main page after you scanned the QR code*
 
 ## Upcoming Features (Roadmap) ⏱️
 
