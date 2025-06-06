@@ -1,6 +1,6 @@
 # Wine & Cheese Recommendation App 🍷❤️🧀
 
-An intuitive mobile application requested by the **Intermarché from Saint Rémy de Provence**. this app helps food and wine lovers discover perfect Intermarché's wine and cheese pairings, built using the no-code platform **Bubble.io**.
+An intuitive mobile application requested by the **Intermarché from Saint-Rémy-de-Provence**. this app helps food and wine lovers discover perfect Intermarché's wine and cheese pairings, built using the no-code platform **Bubble.io**.
 
 ## Project Description 🔎
 
