@@ -1,10 +1,10 @@
-# Wine & Cheese Recommender App
+# Wine & Cheese Recommendation App 🍷❤️🧀
 
-An intuitive mobile application that helps food and wine lovers discover perfect wine and cheese pairings, built using the no-code platform **Bubble.io**.
+An intuitive mobile application requested by the **Intermarché from Saint Rémy de Provance**. this app helps food and wine lovers discover perfect Intermarché's wine and cheese pairings, built using the no-code platform **Bubble.io**.
 
-## Project Description
+## Project Description 🔎
 
-**Wine & Cheese Recommender App** allows users to:
+**Wine & Cheese Recommendation App** allows users to:
 
 - Search for a wine or cheese to find the best matching pairings.  
 - Explore new combinations based on their taste, mood, or special occasions.  
@@ -12,14 +12,14 @@ An intuitive mobile application that helps food and wine lovers discover perfect
 - Save their favorite pairings for easy access later.  
 - Create a personalized profile for a tailored experience.
 
-## Objectives
+## Objectives 🎯
 
 - Deliver a **smooth, immersive, and enjoyable** user experience.  
 - Provide **relevant and personalized** recommendations through a smart database.  
 - Promote local products, culinary heritage, and regional producers.  
 - Encourage culinary discovery through an accessible and user-friendly app.
 
-## Tech Stack
+## Tech Stack 👩‍💻
 
 - **Bubble.io**: No-code platform used for application development.  
 - **Bubble Database**: Centralized management of content (wines, cheeses, users).  
@@ -27,7 +27,7 @@ An intuitive mobile application that helps food and wine lovers discover perfect
 - **Responsive Design**: Optimized for mobile and tablet using Bubble’s native tools.  
 - **Bubble Plugins**: To integrate advanced features (geolocation, filters, analytics, etc.).
 
-## Core Features
+## Core Features 📱
 
 - Smart search: by wine type, cheese type, region, occasion, or mood.  
 - Dynamic recommendations: tailored to taste preferences or seasonal trends.  
@@ -35,7 +35,22 @@ An intuitive mobile application that helps food and wine lovers discover perfect
 - Favorites and history: store liked pairings, receive suggestions based on past activity.  
 - User accounts: profile creation, personalized suggestions, badges or levels to encourage exploration.
 
-## Upcoming Features (Roadmap)
+
+## How to Launch the Program 🚀
+
+To access our app, you need to scan the QR code on this flyer using your phone.
+
+
+![Flyer Scan](/Documents/Readme_extension/scan.png)
+*This flyer can be found
+
+Afterwards, you will be redirected onto our welcome page, press anywhere on the screen to access our application with all the current functionalities.
+
+![Main Page](/Documents/Readme_extension/main_page.png)
+
+*the main page after you scanned the QR code*
+
+## Upcoming Features (Roadmap) ⏱️
 
 - "Random Discovery" mode: to try surprising or unconventional pairings.  
 - "Reverse Pairing" function: find the perfect cheese for a specific wine (and vice versa).  
