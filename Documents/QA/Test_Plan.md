@@ -30,7 +30,7 @@ This document outlines the test plan for the Bubble project. The goal of this te
 
 ## Test Environment
 
-The test environment for the Bubble project will consist of only one component: the Bubble project itself. As Bubble is a web-based application, the test environment will be set up on a our computer directly. Tests will mainly be visual and human-based, as there are no automated tests available for the Bubble project. The test environment will be configured to simulate real-world usage scenarios and include various simulated devices to ensure compatibility and responsiveness across different platforms.
+The test environment for the Bubble project will consist of only one component: the Bubble project itself. As Bubble is a web-based application, the test environment will be set up on our computer directly. Tests will mainly be visual and human-based, as there are no automated tests available for the Bubble project. The test environment will be configured to simulate real-world usage scenarios and include various simulated devices to ensure compatibility and responsiveness across different platforms.
 
 ## Scope of Testing
 
