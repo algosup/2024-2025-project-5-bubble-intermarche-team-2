@@ -58,7 +58,7 @@ Each test case is categorized into one of the following categories:
 - **Criticality**: Medium (🟡)
 - **Procedure**:
   1. Allow the application to access the camera.
-  2. CLick on the _Activate the camera_ button.
+  2. Click on the _Activate the camera_ button.
   3. Scan a valid barcode.
   4. Ensure the scanned data is displayed correctly.
 - **Expected Outcome**: The application should successfully scan the barcode and display the correct data.
