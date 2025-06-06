@@ -103,7 +103,7 @@ Each test case is categorized into one of the following categories:
 
 ### Test Case 7: Localization
 
-- **Description**: Verify that the application localize properly the various elements in the supermarket.
+- **Description**: Verify that the application properly localizes the various elements in the supermarket.
 - **Category**: Usability
 - **Criticality**: Medium (🟡)
 - **Procedure**:

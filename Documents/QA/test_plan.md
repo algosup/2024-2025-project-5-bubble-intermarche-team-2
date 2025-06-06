@@ -18,7 +18,7 @@
   - [Test Strategy](#test-strategy)
   - [Test Cases](#test-cases)
   - [Test Reporting](#test-reporting)
-  - [Bug lifecycle](#bug-lifecycle)
+  - [Bug Lifecycle](#bug-lifecycle)
   - [Risks and Mitigation](#risks-and-mitigation)
   - [Conclusion](#conclusion)
 
@@ -34,7 +34,7 @@ The test environment for the Bubble project will consist of only one component: 
 
 ## Scope of Testing
 
-The scope of testing of this project encompasses all key requirements pointed out by the client and mentionned in both functional and technical specifications. It will ensure the correctness of the application and its compliance with the specifications.
+The scope of testing of this project encompasses all key requirements pointed out by the client and mentioned in both functional and technical specifications. It will ensure the correctness of the application and its compliance with the specifications.
 
 ### In-Scope Testing
 
@@ -121,7 +121,7 @@ Each test cycle will be followed by a test report summarizing the testing activi
 
 The test report will be shared with the project manager, development team, and other stakeholders to ensure transparency and facilitate communication. The report will also include any lessons learned during the testing process to improve future testing efforts.
 
-## Bug lifecycle
+## Bug Lifecycle
 
 In the context of software testing, the bug lifecycle refers to the various stages that a bug goes through from its discovery to its resolution. The bug lifecycle typically includes the following stages:
 
@@ -133,7 +133,7 @@ In the context of software testing, the bug lifecycle refers to the various stag
 
 This PlantUML diagram illustrates the bug lifecycle:
 
-![bugLifeCycle.svg](./Images/bugLifeCycle.svg)
+![bugLifeCycle.svg](./Images/bug_life_cycle.svg)
 
 As you can see, the bug lifecycle is a continuous process that involves multiple stages and interactions between testers and developers. The goal of the bug lifecycle is to ensure that bugs are identified, tracked, and resolved efficiently, leading to a higher quality software product.
 The bug lifecycle is an essential part of the software development process, as it helps teams manage and prioritize bugs effectively. By following a structured bug lifecycle, teams can ensure that bugs are addressed in a timely manner and that the overall quality of the software is maintained.
