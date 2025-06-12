@@ -6,8 +6,8 @@
 
 ---
 
-This week focused on polishing the project by fixing minor bugs, submitting the pull request for the test plan and test cases, and finalizing the KPIs. 
-The README.md was completed by the program manager. 
+This week focused on polishing the project by fixing minor bugs, submitting the pull request for the test plan and test cases, and finalizing the KPIs.
+The program manager completed the README.md.
 Some team members also began preparing for their oral presentations scheduled for Week 9.
 
 ## Accomplishments
@@ -31,8 +31,8 @@ This week we had no challenges.
 
 ---
 
-Start slides for the oral and prepare the application and management documents for the pull request the monday of the week 9.
-Make the weekly report of the week 8 and update KPIs, WBS, and actual schedule.
+Start slides for the oral and prepare the application and management documents for the pull request the Monday of week 9.
+Make the weekly report of week 8 and update KPIs, WBS, and the actual schedule.
 
 ## Conclusion
 
