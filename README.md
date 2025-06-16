@@ -32,17 +32,22 @@ An intuitive mobile application requested by the **Intermarché from Saint-Rémy
 - Smart search: by wine type, cheese type, region, occasion, or mood.  
 - Dynamic recommendations: tailored to taste preferences or seasonal trends.  
 - Interactive product profiles: detailed info with images, tasting tips, and pairing suggestions.  
-- Favorites and history: store liked pairings, and receive suggestions based on past activity.  
-- User accounts: profile creation, personalized suggestions, badges, or levels to encourage exploration.
+- Favorites and history: store liked pairings, and receive suggestions based on past activity.
+- Pairing function: find the perfect cheese for a specific wine (and vice versa) but also with recipes.  
 
+## Upcoming Features (Roadmap) ⏱️
+
+- "Random Discovery" mode: to try surprising or unconventional pairings.  
+- Community rating system: users can rate pairings and help refine suggestions.  
+- Interactive maps: explore wine and cheese regions with geo-based suggestions.
 
 ## How to Launch the Program 🚀
 
 To access our app, you need to scan the QR code on this flyer using your phone.
 
-
 ![Flyer Scan](/Documents/Readme_extension/scan.png)
-*This flyer can be found
+
+*This flyer can be found at the entrance to the supermarket*
 
 Afterward, you will be redirected to our welcome page, press anywhere on the screen to access our application with all the current functionalities.
 
@@ -50,10 +55,6 @@ Afterward, you will be redirected to our welcome page, press anywhere on the scr
 
 *The main page after you scanned the QR code*
 
-## Upcoming Features (Roadmap) ⏱️
+## Access the application source code
 
-- "Random Discovery" mode: to try surprising or unconventional pairings.  
-- "Reverse Pairing" function: find the perfect cheese for a specific wine (and vice versa).  
-- Community rating system: users can rate pairings and help refine suggestions.  
-- Social sharing: post favorite pairings and discoveries on social platforms.  
-- Interactive maps: explore wine and cheese regions with geo-based suggestions.
+To access the application as a developer, go to the [Bubble](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://bubble.io/&ved=2ahUKEwiY9oratvWNAxUSKvsDHYI5KlUQFnoECAsQAQ&usg=AOvVaw20L1QyKf4MyB68OlIyHm38) website then use Grégory Pagnoux's connection code. The webapp is available in the "ProjectTeam 2" folder, click on webapp.
